@@ -8,16 +8,26 @@
 <body>
 
 <h1>Café Aotearoa</h1>
-<p>Hot drinks:</p>
+<h2>Hot drinks:</h2>
 <form onsubmit="return false;">
     <label for="flatWhite">Flat White</label>
     <input type="number" id="flat" name="flatWhite" placeholder="Amount...">
     <input type="submit" onClick="getFlatWhite()">
 </form>
-<p>Cold drinks:</p>
-<p>Food:</p>
+<h2>Cold drinks:</h2>
+<form onsubmit="return false;">
+    <label for="orangeJuice">Orange Juice</label>
+    <input type="number" id="orange" name="orangeJuice" placeholder="Amount...">
+    <input type="submit" onClick="getOrangeJuice()">
+</form>
+<h2>Food:</h2>
+<form onsubmit="return false;">
+    <label for="blueberryMuffin">Blueberry Muffin</label>
+    <input type="number" id="blueberry" name="blueberryMuffin" placeholder="Amount...">
+    <input type="submit" onClick="getBlueberryMuffin()">
+</form>
 
-
+<br>
 <button onclick="receipt()">Receipt:</button>
 
   <div id="spaceForJavaScriptOutput"></div>

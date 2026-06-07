@@ -4,18 +4,21 @@
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 OUTPUT.innerHTML = "<h2>Added by JavaScript</h2>"
 
-let receiptArray = [];
+let itemArray = [];
+let amountArray = [];
 
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
-    let item = FLAT_WHITE.value;
-    receiptArray.push(item);
+    let item = "Flat White";
+    itemArray.push(item);
+    let amount = FLAT_WHITE.value;
+    amountArray.push(amount);
   }
 
   function getReceipt(){
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
-  for (let i=0; i<receiptArray.length; i++){
-    OUTPUT.innerHTML += "<p> + ("flat") + ": " + receiptArray[i] + "</p>";
+  for (let i=0; i<itemArray.length; i++){
+    OUTPUT.innerHTML += "<p>" + itemArray[i] + ": " + receiptArray[i] + "</p>";
   }
     }
 

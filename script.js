@@ -42,7 +42,7 @@ function getBlueberryMuffin(){
   for (let i=0; i<itemArray.length; i++){
     OUTPUT.innerHTML += "<p>" + itemArray[i] + ": " + amountArray[i] + " = $" + priceArray[i] + "</p>";
   }
-  OUTPUT.innerHTML += "<h3>Total: $" + priceArray.total + "</h3>"
+  OUTPUT.innerHTML += "<h3>Total: $" + priceArray.reduce() + "</h3>"
     }
 
 function receipt(){

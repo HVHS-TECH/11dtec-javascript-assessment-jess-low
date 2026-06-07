@@ -1,3 +1,19 @@
-function getForm1(){
-    
+
+let receiptArray = [];
+
+function getFlatWhite(){
+    const FLAT_WHITE = document.getElementById("flat");
+    let item = FLAT_WHITE.value;
+    receiptArray.push(item);
+  }
+
+  function getReceipt(){
+    OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
+  for (let i=0; i<receiptArray.length; i++){
+    OUTPUT.innerHTML += "<p>Item " + (i+1) + ": " + receiptArray[i] + "</p>";
+  }
+    }
+
+function receipt(){
+    getReceipt()
 }

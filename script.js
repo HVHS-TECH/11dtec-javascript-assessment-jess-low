@@ -15,7 +15,7 @@ function getFlatWhite(){
   function getReceipt(){
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
   for (let i=0; i<receiptArray.length; i++){
-    OUTPUT.innerHTML += "<p>Item " + (i+1) + ": " + receiptArray[i] + "</p>";
+    OUTPUT.innerHTML += "<p> + ("flat") + ": " + receiptArray[i] + "</p>";
   }
     }
 

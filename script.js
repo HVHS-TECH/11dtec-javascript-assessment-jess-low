@@ -38,7 +38,7 @@ function getBlueberryMuffin(){
   }
 
 function calcFunc(total, num) {
-  return total - num;
+  return total + num;
 }
 
   function getReceipt(){

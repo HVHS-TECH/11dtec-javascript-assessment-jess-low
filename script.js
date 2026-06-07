@@ -13,8 +13,8 @@ function getFlatWhite(){
     itemArray.push(item);
     let amount = FLAT_WHITE.value;
     amountArray.push(amount);
-    let amount = FLAT_WHITE.value;
-    amountArray.push(amount);
+    let price = (FLAT_WHITE.value * 6);
+    priceArray.push(price);
   }
 
 function getOrangeJuice(){
@@ -23,6 +23,8 @@ function getOrangeJuice(){
     itemArray.push(item);
     let amount = ORANGE_JUICE.value;
     amountArray.push(amount);
+    let price = (ORANGE_JUICE.value * 6);
+    priceArray.push(price);
   }
 
 function getBlueberryMuffin(){
@@ -31,13 +33,16 @@ function getBlueberryMuffin(){
     itemArray.push(item);
     let amount = BLUEBERRY_MUFFIN.value;
     amountArray.push(amount);
+    let price = (BLUEBERRY_MUFFIN.value * 5);
+    priceArray.push(price);
   }
 
   function getReceipt(){
-    OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
+    OUTPUT.innerHTML = "<h3>These are the items on your receipt:</h3>"
   for (let i=0; i<itemArray.length; i++){
-    OUTPUT.innerHTML += "<p>" + itemArray[i] + ": " + amountArray[i] + "</p>";
+    OUTPUT.innerHTML += "<p>" + itemArray[i] + ": " + amountArray[i] + " = $" + priceArray[i] + "</p>";
   }
+  OUTPUT.innerHTML += "<h3>Total: $" + priceArray.total + "</h3>"
     }
 
 function receipt(){

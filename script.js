@@ -37,14 +37,18 @@ function getBlueberryMuffin(){
     priceArray.push(price);
   }
 
+function calcFunc(total, num) {
+  return total - num;
+}
+
   function getReceipt(){
     OUTPUT.innerHTML = "<h3>These are the items on your receipt:</h3>"
   for (let i=0; i<itemArray.length; i++){
     OUTPUT.innerHTML += "<p>" + itemArray[i] + ": " + amountArray[i] + " = $" + priceArray[i] + "</p>";
   }
-  OUTPUT.innerHTML += "<h3>Total: $" + priceArray.reduce() + "</h3>"
+  OUTPUT.innerHTML += "<h3>Total: $" + priceArray.reduce(calcFunc) + "</h3>"
     }
 
 function receipt(){
-    getReceipt()
+    getReceipt();
 }

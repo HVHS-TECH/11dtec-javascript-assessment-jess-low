@@ -40,6 +40,7 @@ function getBlueberryMuffin(){
 function calcFunc(total, num) {
   return total + num;
 }
+hpow
 
   function getReceipt(){
     OUTPUT.innerHTML = "<h3>These are the items on your receipt:</h3>"

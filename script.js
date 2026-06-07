@@ -5,11 +5,14 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
 let itemArray = [];
 let amountArray = [];
+let priceArray = [];
 
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
     let item = "Flat White";
     itemArray.push(item);
+    let amount = FLAT_WHITE.value;
+    amountArray.push(amount);
     let amount = FLAT_WHITE.value;
     amountArray.push(amount);
   }

@@ -45,13 +45,23 @@ function getBlueberryMuffin(){
   }
 }
 
-function calcFunc() {
-  return price.flatWhite + price.orangeJuice + price.blueberryMuffin
+function calcFunc(){
+  return (price.flatWhite + price.orangeJuice + price.blueberryMuffin)
 }
+
 
 function getName(){
   const GET_NAME = document.getElementById("name");
   name = GET_NAME.value;
+}
+
+function getMoney(){
+  const GET_MONEY = document.getElementById("money");
+  money = GET_MONEY.value;
+}
+
+function calcTwoFunc(){
+  return (money - calcFunc())
 }
 
   function getReceipt(){
@@ -73,6 +83,7 @@ function getName(){
       OUTPUT.innerHTML += "";
     }
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>"
+    OUTPUT.innerHTML += "<h4>Change: $" + calcTwoFunc() + "</h4>"
     }
 
 function receipt(){

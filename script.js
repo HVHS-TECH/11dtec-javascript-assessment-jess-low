@@ -63,7 +63,6 @@ function getMoney(){
 
   function getReceipt(){
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>"
-    OUTPUT.innerHTML = "<h2> Money: " + money + "</h2>"
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
     if (item.flatWhite > 0) {
       OUTPUT.innerHTML += "<p>Flat White: " + item.flatWhite + " = $" + price.flatWhite + "</p>"
@@ -82,6 +81,7 @@ function getMoney(){
     }
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>"
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>"
+    OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()) + "</h3>"
     }
 
 function receipt(){

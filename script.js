@@ -60,9 +60,6 @@ function getMoney(){
   money = GET_MONEY.value;
 }
 
-function calcTwoFunc(){
-  return (money - calcFunc())
-}
 
   function getReceipt(){
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>"
@@ -83,7 +80,7 @@ function calcTwoFunc(){
       OUTPUT.innerHTML += "";
     }
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>"
-    OUTPUT.innerHTML += "<h4>Change: $" + calcTwoFunc() + "</h4>"
+    OUTPUT.innerHTML += "<h4>Change: $" + money-calcFunc() + "</h4>"
     }
 
 function receipt(){

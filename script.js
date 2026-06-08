@@ -39,8 +39,8 @@ function getBlueberryMuffin(){
     itemArray.push(item);
   }
 
-function calcFunc(total, num) {
-  return total + num;
+function calcFunc() {
+  return price.flatWhite + price.orangeJuice + price.blueperryMuffin
 }
 
 function getName(){
@@ -51,12 +51,11 @@ function getName(){
   function getReceipt(){
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>"
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
+    OUTPUT.innerHTML += "<p>" + item.flatWhite + ": $" + price.flatWhite + "</p>"
+    OUTPUT.innerHTML += "<p>" + item.orangeJuice + ": $" + price.orangeJuice + "</p>"
+    OUTPUT.innerHTML += "<p>" + item.blueberryMuffin + ": $" + price.blueberryMuffin + "</p>"
     
-
-  for (let i=0; i<itemArray.length; i++){
-    OUTPUT.innerHTML += "<p>" + itemArray[i] + ": " + amountArray[i] + " = $" + priceArray[i] + "</p>";
-  }
-  OUTPUT.innerHTML += "<h3>Total: $" + priceArray.reduce(calcFunc) + "</h3>"
+    OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>"
     }
 
 function receipt(){

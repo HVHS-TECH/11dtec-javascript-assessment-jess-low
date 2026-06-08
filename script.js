@@ -3,36 +3,38 @@
 
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
+var item = {
+  flatWhite: 0,
+  orangeJuice: 0,
+  blueberryMuffin: 0,
+}
+
 let itemArray = [];
-let amountArray = [];
 let priceArray = [];
 
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
+    item.flatWhite = FLAT_WHITE.value;
     let item = "Flat White";
     itemArray.push(item);
-    let amount = FLAT_WHITE.value;
-    amountArray.push(amount);
     let price = (FLAT_WHITE.value * 6);
     priceArray.push(price);
   }
 
 function getOrangeJuice(){
     const ORANGE_JUICE = document.getElementById("orange");
+    item.orangeJuice = ORANGE_JUICE.value;
     let item = "Orange Juice";
     itemArray.push(item);
-    let amount = ORANGE_JUICE.value;
-    amountArray.push(amount);
     let price = (ORANGE_JUICE.value * 6);
     priceArray.push(price);
   }
 
 function getBlueberryMuffin(){
     const BLUEBERRY_MUFFIN = document.getElementById("blueberry");
+    item.blueberryMuffin = BLUEBERRY_MUFFIN.value;
     let item = "Blueberry Muffin";
     itemArray.push(item);
-    let amount = BLUEBERRY_MUFFIN.value;
-    amountArray.push(amount);
     let price = (BLUEBERRY_MUFFIN.value * 5);
     priceArray.push(price);
   }

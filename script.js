@@ -9,6 +9,12 @@ var item = {
   blueberryMuffin: 0,
 }
 
+var price = {
+  flatWhite: (6 * item.flatWhite),
+  orangeJuice: (6 * item.orangeJuice),
+  blueberryMuffin: (5 * item.blueberryMuffin),
+}
+
 let itemArray = [];
 let priceArray = [];
 
@@ -17,8 +23,6 @@ function getFlatWhite(){
     item.flatWhite = FLAT_WHITE.value;
     let item = "Flat White";
     itemArray.push(item);
-    let price = (FLAT_WHITE.value * 6);
-    priceArray.push(price);
   }
 
 function getOrangeJuice(){
@@ -26,8 +30,6 @@ function getOrangeJuice(){
     item.orangeJuice = ORANGE_JUICE.value;
     let item = "Orange Juice";
     itemArray.push(item);
-    let price = (ORANGE_JUICE.value * 6);
-    priceArray.push(price);
   }
 
 function getBlueberryMuffin(){
@@ -35,8 +37,6 @@ function getBlueberryMuffin(){
     item.blueberryMuffin = BLUEBERRY_MUFFIN.value;
     let item = "Blueberry Muffin";
     itemArray.push(item);
-    let price = (BLUEBERRY_MUFFIN.value * 5);
-    priceArray.push(price);
   }
 
 function calcFunc(total, num) {
@@ -51,6 +51,8 @@ function getName(){
   function getReceipt(){
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>"
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
+    
+
   for (let i=0; i<itemArray.length; i++){
     OUTPUT.innerHTML += "<p>" + itemArray[i] + ": " + amountArray[i] + " = $" + priceArray[i] + "</p>";
   }

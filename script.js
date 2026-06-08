@@ -41,6 +41,10 @@ function calcFunc(total, num) {
   return total + num;
 }
 
+function getName(){
+  const GET_NAME = document.getElementById("name");
+}
+
   function getReceipt(){
     OUTPUT.innerHTML = "<h3>These are the items on your receipt:</h3>"
   for (let i=0; i<itemArray.length; i++){

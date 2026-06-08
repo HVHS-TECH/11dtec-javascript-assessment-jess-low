@@ -17,21 +17,33 @@ var price = {
 
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
+    if (FLAT_WHITE.checkValidity() === false){
+      OUTPUT.innerHTML += ""
+    } else {
     item.flatWhite = FLAT_WHITE.value;
     price.flatWhite = (6 * item.flatWhite);
   }
+}
 
 function getOrangeJuice(){
     const ORANGE_JUICE = document.getElementById("orange");
+    if (ORANGE_JUICE.checkValidity() === false){
+      OUTPUT.innerHTML += ""
+    } else {
     item.orangeJuice = ORANGE_JUICE.value;
     price.orangeJuice = (6 * item.orangeJuice);
   }
+}
 
 function getBlueberryMuffin(){
     const BLUEBERRY_MUFFIN = document.getElementById("blueberry");
+    if (BLUEBERRY_MUFFIN.checkValidity() === false){
+      OUTPUT.innerHTML += ""
+    } else {
     item.blueberryMuffin = BLUEBERRY_MUFFIN.value;
     price.blueberryMuffin = (5 * item.blueberryMuffin);
   }
+}
 
 function calcFunc() {
   return price.flatWhite + price.orangeJuice + price.blueberryMuffin

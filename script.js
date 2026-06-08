@@ -80,7 +80,7 @@ function getMoney(){
       OUTPUT.innerHTML += "";
     }
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>"
-    OUTPUT.innerHTML += "<h4>Change: $" + money-calcFunc() + "</h4>"
+    OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>"
     }
 
 function receipt(){

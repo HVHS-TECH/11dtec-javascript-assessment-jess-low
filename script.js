@@ -43,10 +43,11 @@ function calcFunc(total, num) {
 
 function getName(){
   const GET_NAME = document.getElementById("name");
+  name = GET_NAME.value;
 }
 
   function getReceipt(){
-    OUTPUT.innerHTML = "<h2> Name: " + nameAdd + "</h2>"
+    OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>"
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
   for (let i=0; i<itemArray.length; i++){
     OUTPUT.innerHTML += "<p>" + itemArray[i] + ": " + amountArray[i] + " = $" + priceArray[i] + "</p>";

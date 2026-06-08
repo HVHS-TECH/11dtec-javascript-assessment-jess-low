@@ -9,7 +9,6 @@ var item = {
   blueberryMuffin: 0,
 }
 
-
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
     item.flatWhite = FLAT_WHITE.value;

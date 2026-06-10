@@ -68,11 +68,12 @@ function displayStuff(_name, _item, _price){
 }
 
 function viewItems(){
+  const ORDER_BUTTON = document.getElementById("order")
+  const RECEIPT_BUTTON = document.getElementById("receipt")
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>"
   displayStuff("Flat White", item.flatWhite, price.flatWhite)
   displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice)
   displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin)
-  OUTPUT.innerHTML += 
 }
 
   function getReceipt(){

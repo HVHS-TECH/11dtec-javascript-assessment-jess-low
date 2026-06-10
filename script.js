@@ -4,7 +4,7 @@
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
 var item = {
-  flatWhite: 0,
+  flatWhite: {amount: 0, price: 0,},
   orangeJuice: 0,
   blueberryMuffin: 0,
 }
@@ -20,8 +20,8 @@ function getFlatWhite(){
     if (FLAT_WHITE.checkValidity() === false){
       OUTPUT.innerHTML += "";
     } else {
-    item.flatWhite = FLAT_WHITE.value;
-    price.flatWhite = (6 * item.flatWhite);
+    item.flatWhite.amount = FLAT_WHITE.value;
+    item.flatWhite.price = (6 * item.flatWhite.amount);
   }
 }
 

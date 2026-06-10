@@ -67,6 +67,13 @@ function displayStuff(_name, _item, _price){
     }
 }
 
+function viewReceipt(){
+  OUTPUT.innerHTML = "<h3>These are the items on your receipt:</h3>"
+  displayStuff("Flat White", item.flatWhite, price.flatWhite)
+  displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice)
+  displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin)
+}
+
   function getReceipt(){
     if (calcFunc() > money){
       OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>"

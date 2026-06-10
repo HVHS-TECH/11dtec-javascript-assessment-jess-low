@@ -71,16 +71,8 @@ function displayStuff(_name, _item, _price){
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>"
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
     displayStuff("Flat White", item.flatWhite, price.flatWhite)
-    if (item.orangeJuice > 0) {
-      OUTPUT.innerHTML += "<p>Orange Juice: " + item.orangeJuice + " = $" + price.orangeJuice + "</p>"
-    } else {
-      OUTPUT.innerHTML += "";
-    }
-    if (item.blueberryMuffin > 0) {
-      OUTPUT.innerHTML += "<p>Blueberry Muffin: " + item.blueberryMuffin + " = $" + price.blueberryMuffin + "</p>"
-    } else {
-      OUTPUT.innerHTML += "";
-    }
+    displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice)
+    displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin)
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>"
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>"
     OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()) + "</h3>"

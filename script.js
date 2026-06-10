@@ -68,6 +68,9 @@ function displayStuff(_name, _item, _price){
 }
 
   function getReceipt(){
+    if (calcFunc() > money){
+      OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>"
+    } else {
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>"
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
     displayStuff("Flat White", item.flatWhite, price.flatWhite)
@@ -77,6 +80,7 @@ function displayStuff(_name, _item, _price){
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>"
     OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()) + "</h3>"
     }
+  }
 
 function receipt(){
     getReceipt();

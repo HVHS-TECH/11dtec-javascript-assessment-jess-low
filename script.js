@@ -72,7 +72,7 @@ function viewItems(){
   displayStuff("Flat White", item.flatWhite, price.flatWhite)
   displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice)
   displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin)
-  OUTPUT.innerHTML += "<button onclick="receipt()">Receipt:</button>"
+  OUTPUT.innerHTML += 
 }
 
   function getReceipt(){

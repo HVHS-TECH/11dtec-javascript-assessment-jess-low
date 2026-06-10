@@ -46,7 +46,7 @@ function getBlueberryMuffin(){
 }
 
 function calcFunc(){
-  return (price.flatWhite + price.orangeJuice + price.blueberryMuffin);
+  return (item.flatWhite.price + price.orangeJuice + price.blueberryMuffin);
 }
 
 function getName(){
@@ -70,7 +70,7 @@ function displayStuff(_name, _amount, _price){
 function viewItems(){
   const RECEIPT_BUTTON = document.getElementById("receipt");
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
-  displayStuff("Flat White", item.flatWhite, price.flatWhite);
+  displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
   displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice);
   displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin);
   OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
@@ -85,7 +85,7 @@ function viewItems(){
     } else {
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>";
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>";
-    displayStuff("Flat White", item.flatWhite, price.flatWhite);
+    displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
     displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice);
     displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin);
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";

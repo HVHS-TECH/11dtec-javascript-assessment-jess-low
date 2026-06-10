@@ -67,11 +67,12 @@ function displayStuff(_name, _item, _price){
     }
 }
 
-function viewReceipt(){
-  OUTPUT.innerHTML = "<h3>These are the items on your receipt:</h3>"
+function viewItems(){
+  OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>"
   displayStuff("Flat White", item.flatWhite, price.flatWhite)
   displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice)
   displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin)
+  OUTPUT.innerHTML += "<button onclick="receipt()">Receipt:</button>"
 }
 
   function getReceipt(){

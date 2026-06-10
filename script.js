@@ -15,6 +15,10 @@ var price = {
   blueberryMuffin: 0,
 }
 
+function getItem(){
+  
+}
+
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
     if (FLAT_WHITE.checkValidity() === false){

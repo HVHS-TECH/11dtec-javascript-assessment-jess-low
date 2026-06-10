@@ -18,7 +18,7 @@ var price = {
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
     if (FLAT_WHITE.checkValidity() === false){
-      OUTPUT.innerHTML += ""
+      OUTPUT.innerHTML += "";
     } else {
     item.flatWhite = FLAT_WHITE.value;
     price.flatWhite = (6 * item.flatWhite);
@@ -28,7 +28,7 @@ function getFlatWhite(){
 function getOrangeJuice(){
     const ORANGE_JUICE = document.getElementById("orange");
     if (ORANGE_JUICE.checkValidity() === false){
-      OUTPUT.innerHTML += ""
+      OUTPUT.innerHTML += "";
     } else {
     item.orangeJuice = ORANGE_JUICE.value;
     price.orangeJuice = (6 * item.orangeJuice);
@@ -38,7 +38,7 @@ function getOrangeJuice(){
 function getBlueberryMuffin(){
     const BLUEBERRY_MUFFIN = document.getElementById("blueberry");
     if (BLUEBERRY_MUFFIN.checkValidity() === false){
-      OUTPUT.innerHTML += ""
+      OUTPUT.innerHTML += "";
     } else {
     item.blueberryMuffin = BLUEBERRY_MUFFIN.value;
     price.blueberryMuffin = (5 * item.blueberryMuffin);
@@ -46,7 +46,7 @@ function getBlueberryMuffin(){
 }
 
 function calcFunc(){
-  return (price.flatWhite + price.orangeJuice + price.blueberryMuffin)
+  return (price.flatWhite + price.orangeJuice + price.blueberryMuffin);
 }
 
 function getName(){
@@ -61,33 +61,33 @@ function getMoney(){
 
 function displayStuff(_name, _item, _price){
     if (_item > 0) {
-      OUTPUT.innerHTML += "<p>" + _name + ": " + _item + " = $" + _price + "</p>"
+      OUTPUT.innerHTML += "<p>" + _name + ": " + _item + " = $" + _price + "</p>";
     } else {
-      OUTPUT.innerHTML += ""
+      OUTPUT.innerHTML += "";
     }
 }
 
 function viewItems(){
-  const ORDER_BUTTON = document.getElementById("order")
-  const RECEIPT_BUTTON = document.getElementById("receipt")
-  OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>"
-  displayStuff("Flat White", item.flatWhite, price.flatWhite)
-  displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice)
-  displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin)
+  const RECEIPT_BUTTON = document.getElementById("receipt");
+  OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
+  displayStuff("Flat White", item.flatWhite, price.flatWhite);
+  displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice);
+  displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin);
+  RECEIPT_BUTTON.style.display = 'block';
 }
 
   function getReceipt(){
     if (calcFunc() > money){
-      OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>"
+      OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
     } else {
-    OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>"
-    OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
-    displayStuff("Flat White", item.flatWhite, price.flatWhite)
-    displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice)
-    displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin)
-    OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>"
-    OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>"
-    OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()) + "</h3>"
+    OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>";
+    OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>";
+    displayStuff("Flat White", item.flatWhite, price.flatWhite);
+    displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice);
+    displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin);
+    OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
+    OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>";
+    OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()) + "</h3>";
     }
   }
 

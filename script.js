@@ -73,10 +73,13 @@ function viewItems(){
   displayStuff("Flat White", item.flatWhite, price.flatWhite);
   displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice);
   displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin);
+  OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
   RECEIPT_BUTTON.style.display = 'block';
 }
 
   function getReceipt(){
+  const ORDER_BUTTON = document.getElementById("order");
+  const RECEIPT_BUTTON = document.getElementById("receipt");
     if (calcFunc() > money){
       OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
     } else {
@@ -88,9 +91,7 @@ function viewItems(){
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>";
     OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()) + "</h3>";
+    ORDER_BUTTON.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
     }
   }
-
-function receipt(){
-    getReceipt();
-}

@@ -5,15 +5,10 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
 var item = {
   flatWhite: {amount: 0, price: 0,},
-  orangeJuice: 0,
-  blueberryMuffin: 0,
+  orangeJuice: {amount: 0, price: 0,},
+  blueberryMuffin: {amount: 0, price: 0,},
 }
 
-var price = {
-  flatWhite: 0,
-  orangeJuice: 0,
-  blueberryMuffin: 0,
-}
 
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
@@ -30,8 +25,8 @@ function getOrangeJuice(){
     if (ORANGE_JUICE.checkValidity() === false){
       OUTPUT.innerHTML += "";
     } else {
-    item.orangeJuice = ORANGE_JUICE.value;
-    price.orangeJuice = (6 * item.orangeJuice);
+    item.orangeJuice.amount = ORANGE_JUICE.value;
+    item.orangeJuice.price = (6 * item.orangeJuice.amount);
   }
 }
 
@@ -40,13 +35,13 @@ function getBlueberryMuffin(){
     if (BLUEBERRY_MUFFIN.checkValidity() === false){
       OUTPUT.innerHTML += "";
     } else {
-    item.blueberryMuffin = BLUEBERRY_MUFFIN.value;
-    price.blueberryMuffin = (5 * item.blueberryMuffin);
+    item.blueberryMuffin.amount = BLUEBERRY_MUFFIN.value;
+    item.blueberryMuffin.price = (5 * item.blueberryMuffin.amount);
   }
 }
 
 function calcFunc(){
-  return (item.flatWhite.price + price.orangeJuice + price.blueberryMuffin);
+  return (item.flatWhite.price + item.orangeJuice.price + item.blueberryMuffin.price);
 }
 
 function getName(){
@@ -71,8 +66,8 @@ function viewItems(){
   const RECEIPT_BUTTON = document.getElementById("receipt");
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
   displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
-  displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice);
-  displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin);
+  displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
+  displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
   OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
   RECEIPT_BUTTON.style.display = 'block';
 }
@@ -86,8 +81,8 @@ function viewItems(){
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>";
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>";
     displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
-    displayStuff("Orange Juice", item.orangeJuice, price.orangeJuice);
-    displayStuff("Blueberry Muffin", item.blueberryMuffin, price.blueberryMuffin);
+    displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
+    displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>";
     OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()) + "</h3>";

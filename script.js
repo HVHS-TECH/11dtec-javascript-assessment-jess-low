@@ -46,7 +46,11 @@ function calcFunc(){
 
 function getName(){
   const GET_NAME = document.getElementById("name");
+  if (GET_NAME.checkValidity() === false){
+    OUTPUT.innerHTML += "";
+  } else {
   name = GET_NAME.value;
+  }
 }
 
 function getMoney(){

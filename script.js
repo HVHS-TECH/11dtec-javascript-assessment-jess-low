@@ -49,7 +49,6 @@ function calcFunc(){
   return (price.flatWhite + price.orangeJuice + price.blueberryMuffin)
 }
 
-
 function getName(){
   const GET_NAME = document.getElementById("name");
   name = GET_NAME.value;

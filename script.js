@@ -59,15 +59,18 @@ function getMoney(){
   money = GET_MONEY.value;
 }
 
+function displayStuff(_name, _item, _price){
+    if (_item > 0) {
+      OUTPUT.innerHTML += "<p>" + _name + ": " + _item + " = $" + _price + "</p>"
+    } else {
+      OUTPUT.innerHTML += ""
+    }
+}
 
   function getReceipt(){
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>"
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>"
-    if (item.flatWhite > 0) {
-      OUTPUT.innerHTML += "<p>Flat White: " + item.flatWhite + " = $" + price.flatWhite + "</p>"
-    } else {
-      OUTPUT.innerHTML += ""
-    }
+    displayStuff("Flat White", item.flatWhite, price.flatWhite)
     if (item.orangeJuice > 0) {
       OUTPUT.innerHTML += "<p>Orange Juice: " + item.orangeJuice + " = $" + price.orangeJuice + "</p>"
     } else {

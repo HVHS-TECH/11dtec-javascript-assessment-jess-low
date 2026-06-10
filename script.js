@@ -15,10 +15,6 @@ var price = {
   blueberryMuffin: 0,
 }
 
-function getItem(){
-  
-}
-
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
     if (FLAT_WHITE.checkValidity() === false){
@@ -63,9 +59,9 @@ function getMoney(){
   money = GET_MONEY.value;
 }
 
-function displayStuff(_name, _item, _price){
-    if (_item > 0) {
-      OUTPUT.innerHTML += "<p>" + _name + ": " + _item + " = $" + _price + "</p>";
+function displayStuff(_name, _amount, _price){
+    if (_amount > 0) {
+      OUTPUT.innerHTML += "<p>" + _name + ": " + _amount + " = $" + _price + "</p>";
     } else {
       OUTPUT.innerHTML += "";
     }

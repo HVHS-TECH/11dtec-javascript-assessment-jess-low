@@ -46,11 +46,15 @@ function calcFunc(){
 
 function getName(){
   const GET_NAME = document.getElementById("name");
+  const CLEAR_BUTTON = document.getElementById("clear");
+  const RECEIPT_BUTTON = document.getElementById("receipt");
     if (GET_NAME.checkValidity() === false){
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
+    CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
     OUTPUT.innerHTML = "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
+    CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
    } else{
   name = GET_NAME.value;
@@ -72,6 +76,7 @@ function displayStuff(_name, _amount, _price){
 }
 
 function viewItems(){
+  const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
   displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
@@ -79,11 +84,40 @@ function viewItems(){
   displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
   OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
   RECEIPT_BUTTON.style.display = 'block';
+  CLEAR_BUTTON.style.display = 'block';
+}
+
+function clearAll(){
+  const RECEIPT_BUTTON = document.getElementById("receipt");
+  const CLEAR_BUTTON = document.getElementById("clear");
+  OUTPUT.innerHTML = "";
+  document.getElementById("flat").value = 0;
+  document.getElementById("orange").value = 0;
+  document.getElementById("blueberry").value = 0;
+  document.getElementById("name").value = "";
+  document.getElementById("money").value = 0;
+  RECEIPT_BUTTON.style.display = 'none';
+  CLEAR_BUTTON.style.display = 'none';
+}
+
+function cancelAll(){
+  const RECEIPT_BUTTON = document.getElementById("receipt");
+  const CLEAR_BUTTON = document.getElementById("clear");
+  OUTPUT.innerHTML = "";
+  document.getElementById("flat").value = "";
+  document.getElementById("orange").value = 0;
+  document.getElementById("blueberry").value = 0;
+  document.getElementById("name").value = "";
+  document.getElementById("money").value = 0;
+  RECEIPT_BUTTON.style.display = 'none';
+  CLEAR_BUTTON.style.display = 'none';
 }
 
   function getReceipt(){
   const ORDER_BUTTON = document.getElementById("order");
   const RECEIPT_BUTTON = document.getElementById("receipt");
+  const CLEAR_BUTTON = document.getElementById("clear");
+  const RESET_BUTTON = document.getElementById("reset");
   const GET_NAME = document.getElementById("name");
     if (calcFunc() > money){
       OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
@@ -105,5 +139,7 @@ function viewItems(){
     OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()) + "</h3>";
     ORDER_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
+    RESET_BUTTON.style.display = 'block';
     }
   }

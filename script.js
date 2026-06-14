@@ -135,7 +135,7 @@ function cancelAll(){
   const ORDER_BUTTON = document.getElementById("order");
   const RECEIPT_BUTTON = document.getElementById("receipt");
   const CLEAR_BUTTON = document.getElementById("clear");
-  const RESET_BUTTON = document.getElementById("reset");
+  const CANCEL_BUTTON = document.getElementById("cancel");
   const GET_NAME = document.getElementById("name");
   if (GET_NAME.checkValidity() === false){
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
@@ -165,6 +165,6 @@ function cancelAll(){
     ORDER_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';
-    RESET_BUTTON.style.display = 'block';
+    CANCEL_BUTTON.style.display = 'block';
     }
   }

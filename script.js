@@ -64,7 +64,16 @@ function getName(){
 
 function getMoney(){
   const GET_MONEY = document.getElementById("money");
+  const CLEAR_BUTTON = document.getElementById("clear");
+  const RECEIPT_BUTTON = document.getElementById("receipt");
+  if (GET_MONEY.checkValidity() === false){
+    OUTPUT.innerHTML = "<h3>Please enter an amount into the 'Money' section to complete your order.</h3>";
+    CLEAR_BUTTON.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+  } else {
   money = GET_MONEY.value;
+  OUTPUT.innerHTML = "";
+  }
 }
 
 function displayStuff(_name, _amount, _price){
@@ -122,19 +131,27 @@ function cancelAll(){
 }
 
   function getReceipt(){
+  const GET_MONEY = document.getElementById("money");
   const ORDER_BUTTON = document.getElementById("order");
   const RECEIPT_BUTTON = document.getElementById("receipt");
   const CLEAR_BUTTON = document.getElementById("clear");
   const RESET_BUTTON = document.getElementById("reset");
   const GET_NAME = document.getElementById("name");
-    if (calcFunc() > money){
-      OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
+  if (GET_MONEY.checkValidity() === false){
+    OUTPUT.innerHTML = "<h3>Please enter an amount into the 'Money' section to complete your order.</h3>";
+    CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
-    } else if (GET_NAME.checkValidity() === false){
+  } else if (calcFunc() > money){
+    OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
+    CLEAR_BUTTON.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+  } else if (GET_NAME.checkValidity() === false){
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
+    CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
     OUTPUT.innerHTML = "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
+    CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else {
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>";

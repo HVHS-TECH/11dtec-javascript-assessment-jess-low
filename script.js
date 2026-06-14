@@ -91,11 +91,19 @@ function clearAll(){
   const RECEIPT_BUTTON = document.getElementById("receipt");
   const CLEAR_BUTTON = document.getElementById("clear");
   OUTPUT.innerHTML = "";
-  document.getElementById("flat").value = 0;
+  document.getElementById("flat").value = ;
+  item.flatWhite.amount = 0;
+  item.flatWhite.price = 0;
   document.getElementById("orange").value = 0;
+  item.orangeJuice.amount = 0;
+  item.orangeJuice.price = 0;
   document.getElementById("blueberry").value = 0;
+  item.blueberryMuffin.amount = 0;
+  item.blueberryMuffin.price = 0;
   document.getElementById("name").value = "";
+  name.amount = "";
   document.getElementById("money").value = 0;
+  money.amount = 0;
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
 }

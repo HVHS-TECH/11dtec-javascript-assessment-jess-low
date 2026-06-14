@@ -47,9 +47,11 @@ function calcFunc(){
 function getName(){
   const GET_NAME = document.getElementById("name");
     if (GET_NAME.checkValidity() === false){
-    OUTPUT.innerHTML += "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
+    RECEIPT_BUTTON.style.display = 'none';
   } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
-    OUTPUT.innerHTML += "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
+    RECEIPT_BUTTON.style.display = 'none';
    } else{
   name = GET_NAME.value;
   OUTPUT.innerHTML = "";
@@ -85,10 +87,13 @@ function viewItems(){
   const GET_NAME = document.getElementById("name");
     if (calcFunc() > money){
       OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
+    RECEIPT_BUTTON.style.display = 'none';
     } else if (GET_NAME.checkValidity() === false){
-    OUTPUT.innerHTML += "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
+    RECEIPT_BUTTON.style.display = 'none';
   } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
-    OUTPUT.innerHTML += "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
+    RECEIPT_BUTTON.style.display = 'none';
   } else {
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>";
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>";

@@ -48,6 +48,8 @@ function getName(){
   const GET_NAME = document.getElementById("name");
   if (GET_NAME.checkValidity() === false){
     OUTPUT.innerHTML = "Please enter a name into the 'Name' section to complete your order.";
+  } else if (/[^a-zA-Z' .-]/g.test(name.value)){
+    OUTPUT.innerHTML = "Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.";
   } else {
   name = GET_NAME.value;
   }

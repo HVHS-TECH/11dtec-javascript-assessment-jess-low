@@ -5,6 +5,7 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
 var item = {
   flatWhite: {amount: 0, price: 0,},
+  longBlack: {amount: 0, price: 0,},
   orangeJuice: {amount: 0, price: 0,},
   blueberryMuffin: {amount: 0, price: 0,},
 }
@@ -17,6 +18,16 @@ function getFlatWhite(){
     } else {
     item.flatWhite.amount = FLAT_WHITE.value;
     item.flatWhite.price = (6 * item.flatWhite.amount);
+  }
+}
+
+function getLongBlack(){
+    const LONG_BLACK = document.getElementById("long");
+    if (LONG_BLACK.checkValidity() === false){
+      OUTPUT.innerHTML += "";
+    } else {
+    item.longBlack.amount = FLAT_WHITE.value;
+    item.longBlack.price = (5 * item.longBlack.amount);
   }
 }
 
@@ -41,7 +52,7 @@ function getBlueberryMuffin(){
 }
 
 function calcFunc(){
-  return (item.flatWhite.price + item.orangeJuice.price + item.blueberryMuffin.price);
+  return (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.blueberryMuffin.price);
 }
 
 function getName(){
@@ -93,6 +104,7 @@ function viewItems(){
   const RECEIPT_BUTTON = document.getElementById("receipt");
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
   displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
+  displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
   displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
   displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
   OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
@@ -107,6 +119,9 @@ function clearAll(){
   document.getElementById("flat").value = "";
   item.flatWhite.amount = 0;
   item.flatWhite.price = 0;
+  document.getElementById("long").value = "";
+  item.longBlack.amount = 0;
+  item.longBlack.price = 0;
   document.getElementById("orange").value = "";
   item.orangeJuice.amount = 0;
   item.orangeJuice.price = 0;
@@ -128,6 +143,9 @@ function cancelAll(){
   document.getElementById("flat").value = "";
   item.flatWhite.amount = 0;
   item.flatWhite.price = 0;
+  document.getElementById("long").value = "";
+  item.longBlack.amount = 0;
+  item.longBlack.price = 0;
   document.getElementById("orange").value = "";
   item.orangeJuice.amount = 0;
   item.orangeJuice.price = 0;
@@ -169,6 +187,7 @@ function cancelAll(){
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>";
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>";
     displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
+    displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
     displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";

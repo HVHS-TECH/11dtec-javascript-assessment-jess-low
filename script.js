@@ -47,11 +47,12 @@ function calcFunc(){
 function getName(){
   const GET_NAME = document.getElementById("name");
     if (GET_NAME.checkValidity() === false){
-    OUTPUT.innerHTML = "Please enter a name into the 'Name' section to complete your order.";
+    OUTPUT.innerHTML += "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
   } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
-    OUTPUT.innerHTML = "Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.";
+    OUTPUT.innerHTML += "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
    } else{
   name = GET_NAME.value;
+  OUTPUT.innerHTML = "";
    }
 }
 
@@ -85,9 +86,9 @@ function viewItems(){
     if (calcFunc() > money){
       OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
     } else if (GET_NAME.checkValidity() === false){
-    OUTPUT.innerHTML = "Please enter a name into the 'Name' section to complete your order.";
+    OUTPUT.innerHTML += "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
   } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
-    OUTPUT.innerHTML = "Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.";
+    OUTPUT.innerHTML += "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
   } else {
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>";
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>";

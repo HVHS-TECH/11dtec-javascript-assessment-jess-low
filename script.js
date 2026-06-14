@@ -59,6 +59,8 @@ function getName(){
    } else{
   name = GET_NAME.value;
   OUTPUT.innerHTML = "";
+  RECEIPT_BUTTON.style.display = 'none';
+  CLEAR_BUTTON.style.display = 'none';
    }
 }
 
@@ -73,6 +75,8 @@ function getMoney(){
   } else {
   money = GET_MONEY.value;
   OUTPUT.innerHTML = "";
+  RECEIPT_BUTTON.style.display = 'none';
+  CLEAR_BUTTON.style.display = 'none';
   }
 }
 
@@ -122,10 +126,18 @@ function cancelAll(){
   const CLEAR_BUTTON = document.getElementById("clear");
   OUTPUT.innerHTML = "";
   document.getElementById("flat").value = "";
-  document.getElementById("orange").value = 0;
-  document.getElementById("blueberry").value = 0;
+  item.flatWhite.amount = 0;
+  item.flatWhite.price = 0;
+  document.getElementById("orange").value = "";
+  item.orangeJuice.amount = 0;
+  item.orangeJuice.price = 0;
+  document.getElementById("blueberry").value = "";
+  item.blueberryMuffin.amount = 0;
+  item.blueberryMuffin.price = 0;
   document.getElementById("name").value = "";
-  document.getElementById("money").value = 0;
+  name.amount = "";
+  document.getElementById("money").value = "";
+  money.amount = 0;
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
 }

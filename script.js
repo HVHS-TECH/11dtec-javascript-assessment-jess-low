@@ -46,13 +46,7 @@ function calcFunc(){
 
 function getName(){
   const GET_NAME = document.getElementById("name");
-  if (GET_NAME.checkValidity() === false){
-    OUTPUT.innerHTML = "Please enter a name into the 'Name' section to complete your order.";
-  } else if (/[^a-zA-Z' .-]/g.test(name.value)){
-    OUTPUT.innerHTML = "Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.";
-  } else {
   name = GET_NAME.value;
-  }
 }
 
 function getMoney(){
@@ -81,9 +75,14 @@ function viewItems(){
   function getReceipt(){
   const ORDER_BUTTON = document.getElementById("order");
   const RECEIPT_BUTTON = document.getElementById("receipt");
+  const GET_NAME = document.getElementById("name");
     if (calcFunc() > money){
       OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
-    } else {
+    } else if (GET_NAME.checkValidity() === false){
+    OUTPUT.innerHTML = "Please enter a name into the 'Name' section to complete your order.";
+  } else if (/[^a-zA-Z' .-]/g.test(name.value)){
+    OUTPUT.innerHTML = "Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.";
+  } else {
     OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>";
     OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>";
     displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);

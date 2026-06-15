@@ -64,7 +64,7 @@ function getBlueberryMuffin(){
 
 //Find total price
 function calcFunc(){
-  return (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price);
+  return (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
 }
 
 //Check if name is valid

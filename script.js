@@ -219,7 +219,7 @@ function cancelAll(){
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>";
-    OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()) + "</h3>";
+    OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()).toFixed(2) + "</h3>";
     ORDER_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';

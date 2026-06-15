@@ -7,6 +7,7 @@ var item = {
   flatWhite: {amount: 0, price: 0,},
   longBlack: {amount: 0, price: 0,},
   orangeJuice: {amount: 0, price: 0,},
+  appleJuice: {amount: 0, price: 0,},
   blueberryMuffin: {amount: 0, price: 0,},
 }
 
@@ -26,7 +27,7 @@ function getLongBlack(){
     if (LONG_BLACK.checkValidity() === false){
       OUTPUT.innerHTML += "";
     } else {
-    item.longBlack.amount = FLAT_WHITE.value;
+    item.longBlack.amount = LONG_BLACK.value;
     item.longBlack.price = (5 * item.longBlack.amount);
   }
 }
@@ -38,6 +39,15 @@ function getOrangeJuice(){
     } else {
     item.orangeJuice.amount = ORANGE_JUICE.value;
     item.orangeJuice.price = (6 * item.orangeJuice.amount);
+  }
+}
+function getAppleJuice(){
+    const APPLE_JUICE = document.getElementById("apple");
+    if (APPLE_JUICE.checkValidity() === false){
+      OUTPUT.innerHTML += "";
+    } else {
+    item.appleJuice.amount = APPLE_JUICE.value;
+    item.appleJuice.price = (6 * item.appleJuice.amount);
   }
 }
 
@@ -52,7 +62,7 @@ function getBlueberryMuffin(){
 }
 
 function calcFunc(){
-  return (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.blueberryMuffin.price);
+  return (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price);
 }
 
 function getName(){
@@ -106,6 +116,7 @@ function viewItems(){
   displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
   displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
   displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
+  displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
   displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
   OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
   RECEIPT_BUTTON.style.display = 'block';
@@ -125,6 +136,9 @@ function clearAll(){
   document.getElementById("orange").value = "";
   item.orangeJuice.amount = 0;
   item.orangeJuice.price = 0;
+  document.getElementById("apple").value = "";
+  item.appleJuice.amount = 0;
+  item.appleJuice.price = 0;
   document.getElementById("blueberry").value = "";
   item.blueberryMuffin.amount = 0;
   item.blueberryMuffin.price = 0;
@@ -149,6 +163,9 @@ function cancelAll(){
   document.getElementById("orange").value = "";
   item.orangeJuice.amount = 0;
   item.orangeJuice.price = 0;
+  document.getElementById("apple").value = "";
+  item.appleJuice.amount = 0;
+  item.appleJuice.price = 0;
   document.getElementById("blueberry").value = "";
   item.blueberryMuffin.amount = 0;
   item.blueberryMuffin.price = 0;
@@ -189,6 +206,7 @@ function cancelAll(){
     displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
     displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
     displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
+    displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>";

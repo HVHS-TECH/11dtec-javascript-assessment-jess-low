@@ -95,7 +95,6 @@ function getMoney(){
     RECEIPT_BUTTON.style.display = 'none';
   } else {
   money = Number(GET_MONEY.value).toFixed(2);
-  
   OUTPUT.innerHTML = "";
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
@@ -192,6 +191,7 @@ function cancelAll(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const CANCEL_BUTTON = document.getElementById("cancel");
   const GET_NAME = document.getElementById("name");
+  item.finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
   if (GET_NAME.checkValidity() === false){
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';

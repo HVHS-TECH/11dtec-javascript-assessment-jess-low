@@ -149,7 +149,7 @@ function clearAll(){
   name.amount = "";
   document.getElementById("money").value = "";
   money.amount = 0;
-  item.finalNumber = 0;
+  finalNumber.amount = 0;
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
 }
@@ -178,7 +178,7 @@ function cancelAll(){
   name.amount = "";
   document.getElementById("money").value = "";
   money.amount = 0;
-  finalNumber = 0;
+  finalNumber.amount = 0;
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
 }
@@ -204,7 +204,7 @@ function cancelAll(){
     OUTPUT.innerHTML = "<h3>Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
-  } else if (item.finalNumber > money){
+  } else if (finalNumber > money){
     OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
@@ -216,9 +216,9 @@ function cancelAll(){
     displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
     displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
-    OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
+    OUTPUT.innerHTML += "<h3>Total: $" + finalNumber + "</h3>";
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>";
-    OUTPUT.innerHTML += "<h3>Change: $" + (money - item.finalNumber).toFixed(2) + "</h3>";
+    OUTPUT.innerHTML += "<h3>Change: $" + (money - finalNumber).toFixed(2) + "</h3>";
     ORDER_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';

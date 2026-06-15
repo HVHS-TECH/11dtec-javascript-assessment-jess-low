@@ -10,6 +10,7 @@ var item = {
   orangeJuice: {amount: 0, price: 0,},
   appleJuice: {amount: 0, price: 0,},
   blueberryMuffin: {amount: 0, price: 0,},
+  cheeseScone: {amount: 0, price: 0,},
   finalNumber: 0,
 }
 
@@ -20,10 +21,9 @@ function getFlatWhite(){
       OUTPUT.innerHTML += "";
     } else {
     item.flatWhite.amount = FLAT_WHITE.value;
-    item.flatWhite.price = (6 * item.flatWhite.amount);
+    item.flatWhite.price = (5.5 * item.flatWhite.amount).toFixed(2);
   }
 }
-
 function getLongBlack(){
     const LONG_BLACK = document.getElementById("long");
     if (LONG_BLACK.checkValidity() === false){
@@ -60,6 +60,15 @@ function getBlueberryMuffin(){
     } else {
     item.blueberryMuffin.amount = BLUEBERRY_MUFFIN.value;
     item.blueberryMuffin.price = (5 * item.blueberryMuffin.amount);
+  }
+}
+function getCheeseScone(){
+    const CHEESE_SCONE = document.getElementById("cheese");
+    if (CHEESE_SCONE.checkValidity() === false){
+      OUTPUT.innerHTML += "";
+    } else {
+    item.cheeseScone.amount = CHEESE_SCONE.value;
+    item.cheeseScone.price = (6 * item.cheeseScone.amount);
   }
 }
 
@@ -114,13 +123,14 @@ function displayStuff(_name, _amount, _price){
 function viewItems(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
-  item.finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
+  item.finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price + item.cheeseScone.price).toFixed(2);
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
   displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
   displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
   displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
   displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
   displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
+  displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
   OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
   RECEIPT_BUTTON.style.display = 'block';
   CLEAR_BUTTON.style.display = 'block';
@@ -146,6 +156,9 @@ function clearAll(){
   document.getElementById("blueberry").value = "";
   item.blueberryMuffin.amount = 0;
   item.blueberryMuffin.price = 0;
+  document.getElementById("cheese").value = "";
+  item.cheeseScone.amount = 0;
+  item.cheeseScone.price = 0;
   document.getElementById("name").value = "";
   name.amount = "";
   document.getElementById("money").value = "";
@@ -175,6 +188,9 @@ function cancelAll(){
   document.getElementById("blueberry").value = "";
   item.blueberryMuffin.amount = 0;
   item.blueberryMuffin.price = 0;
+  document.getElementById("cheese").value = "";
+  item.cheeseScone.amount = 0;
+  item.cheeseScone.price = 0;
   document.getElementById("name").value = "";
   name.amount = "";
   document.getElementById("money").value = "";
@@ -192,7 +208,7 @@ function cancelAll(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const CANCEL_BUTTON = document.getElementById("cancel");
   const GET_NAME = document.getElementById("name");
-  item.finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price);
+  item.finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price + item.cheeseScone.price);
   if (GET_NAME.checkValidity() === false){
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
@@ -217,6 +233,7 @@ function cancelAll(){
     displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
     displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
+    displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
     OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber.toFixed(2) + "</h3>";
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>";
     OUTPUT.innerHTML += "<h3>Change: $" + (money - item.finalNumber).toFixed(2) + "</h3>";

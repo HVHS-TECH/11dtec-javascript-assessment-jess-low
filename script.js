@@ -94,6 +94,7 @@ function getMoney(){
     RECEIPT_BUTTON.style.display = 'none';
   } else {
   money = Number(GET_MONEY.value).toFixed(2);
+  finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
   OUTPUT.innerHTML = "";
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
@@ -113,14 +114,13 @@ function displayStuff(_name, _amount, _price){
 function viewItems(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
-  finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
   displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
   displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
   displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
   displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
   displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
-  OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
+  OUTPUT.innerHTML += "<h3>Total: $" + finalNumber + "</h3>";
   RECEIPT_BUTTON.style.display = 'block';
   CLEAR_BUTTON.style.display = 'block';
 }
@@ -191,7 +191,6 @@ function cancelAll(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const CANCEL_BUTTON = document.getElementById("cancel");
   const GET_NAME = document.getElementById("name");
-  item.finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
   if (GET_NAME.checkValidity() === false){
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';

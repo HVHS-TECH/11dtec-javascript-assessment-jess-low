@@ -98,7 +98,7 @@ function getMoney(){
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else {
-  money = GET_MONEY.value;
+  money = Number(GET_MONEY.value).toFixed(2);
   OUTPUT.innerHTML = "";
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';

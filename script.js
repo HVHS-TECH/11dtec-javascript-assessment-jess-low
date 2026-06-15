@@ -63,11 +63,6 @@ function getBlueberryMuffin(){
   }
 }
 
-//Find total price
-function calcFunc(){
-  item.finalNumber = (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
-}
-
 //Check if name is valid
 function getName(){
   const GET_NAME = document.getElementById("name");
@@ -125,7 +120,8 @@ function viewItems(){
   displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
   displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
   displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
-  OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
+  item.finalNumber = (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
+  OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
   RECEIPT_BUTTON.style.display = 'block';
   CLEAR_BUTTON.style.display = 'block';
 }
@@ -154,6 +150,7 @@ function clearAll(){
   name.amount = "";
   document.getElementById("money").value = "";
   money.amount = 0;
+  item.finalNumber = 0;
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
 }
@@ -182,6 +179,7 @@ function cancelAll(){
   name.amount = "";
   document.getElementById("money").value = "";
   money.amount = 0;
+  item.finalNumber = 0;
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
 }
@@ -218,9 +216,9 @@ function cancelAll(){
     displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
     displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
-    OUTPUT.innerHTML += "<h3>Total: $" + calcFunc() + "</h3>";
+    OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
     OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>";
-    OUTPUT.innerHTML += "<h3>Change: $" + (money - calcFunc()).toFixed(2) + "</h3>";
+    OUTPUT.innerHTML += "<h3>Change: $" + (money - item.finalNumber).toFixed(2) + "</h3>";
     ORDER_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';

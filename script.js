@@ -10,6 +10,7 @@ var item = {
   orangeJuice: {amount: 0, price: 0,},
   appleJuice: {amount: 0, price: 0,},
   blueberryMuffin: {amount: 0, price: 0,},
+  finalNumber: 0,
 }
 
 //Set up forms
@@ -64,7 +65,7 @@ function getBlueberryMuffin(){
 
 //Find total price
 function calcFunc(){
-  return (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
+  item.finalNumber = (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
 }
 
 //Check if name is valid

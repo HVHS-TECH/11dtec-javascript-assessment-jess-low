@@ -39,7 +39,7 @@ function getOrangeJuice(){
       OUTPUT.innerHTML += "";
     } else {
     item.orangeJuice.amount = ORANGE_JUICE.value;
-    item.orangeJuice.price = (6 * item.orangeJuice.amount);
+    item.orangeJuice.price = (5.5 * item.orangeJuice.amount);
   }
 }
 function getAppleJuice(){
@@ -48,7 +48,7 @@ function getAppleJuice(){
       OUTPUT.innerHTML += "";
     } else {
     item.appleJuice.amount = APPLE_JUICE.value;
-    item.appleJuice.price = (6 * item.appleJuice.amount);
+    item.appleJuice.price = (5.5 * item.appleJuice.amount);
   }
 }
 

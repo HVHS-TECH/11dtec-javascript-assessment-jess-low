@@ -3,6 +3,7 @@
 
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
+//Store inputs
 var item = {
   flatWhite: {amount: 0, price: 0,},
   longBlack: {amount: 0, price: 0,},
@@ -11,7 +12,7 @@ var item = {
   blueberryMuffin: {amount: 0, price: 0,},
 }
 
-
+//Set up forms
 function getFlatWhite(){
     const FLAT_WHITE = document.getElementById("flat");
     if (FLAT_WHITE.checkValidity() === false){
@@ -61,10 +62,12 @@ function getBlueberryMuffin(){
   }
 }
 
+//Find total price
 function calcFunc(){
   return (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price);
 }
 
+//Check if name is valid
 function getName(){
   const GET_NAME = document.getElementById("name");
   const CLEAR_BUTTON = document.getElementById("clear");
@@ -85,6 +88,7 @@ function getName(){
    }
 }
 
+//Check if amount is valid
 function getMoney(){
   const GET_MONEY = document.getElementById("money");
   const CLEAR_BUTTON = document.getElementById("clear");
@@ -101,6 +105,7 @@ function getMoney(){
   }
 }
 
+//Display for order and receipt
 function displayStuff(_name, _amount, _price){
     if (_amount > 0) {
       OUTPUT.innerHTML += "<p>" + _name + ": " + _amount + " = $" + _price + "</p>";
@@ -109,6 +114,7 @@ function displayStuff(_name, _amount, _price){
     }
 }
 
+//Show items on order
 function viewItems(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
@@ -123,6 +129,7 @@ function viewItems(){
   CLEAR_BUTTON.style.display = 'block';
 }
 
+//Clear everything
 function clearAll(){
   const RECEIPT_BUTTON = document.getElementById("receipt");
   const CLEAR_BUTTON = document.getElementById("clear");
@@ -150,6 +157,7 @@ function clearAll(){
   CLEAR_BUTTON.style.display = 'none';
 }
 
+//Cancel order
 function cancelAll(){
   const RECEIPT_BUTTON = document.getElementById("receipt");
   const CLEAR_BUTTON = document.getElementById("clear");
@@ -177,6 +185,7 @@ function cancelAll(){
   CLEAR_BUTTON.style.display = 'none';
 }
 
+//Show receipt
   function getReceipt(){
   const GET_MONEY = document.getElementById("money");
   const ORDER_BUTTON = document.getElementById("order");

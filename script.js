@@ -95,6 +95,7 @@ function getMoney(){
     RECEIPT_BUTTON.style.display = 'none';
   } else {
   money = Number(GET_MONEY.value).toFixed(2);
+  
   OUTPUT.innerHTML = "";
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
@@ -120,7 +121,6 @@ function viewItems(){
   displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
   displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
   displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
-  item.finalNumber = (item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
   OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
   RECEIPT_BUTTON.style.display = 'block';
   CLEAR_BUTTON.style.display = 'block';
@@ -204,7 +204,7 @@ function cancelAll(){
     OUTPUT.innerHTML = "<h3>Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
-  } else if (calcFunc() > money){
+  } else if (item.finalNumber > money){
     OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';

@@ -10,7 +10,6 @@ var item = {
   orangeJuice: {amount: 0, price: 0,},
   appleJuice: {amount: 0, price: 0,},
   blueberryMuffin: {amount: 0, price: 0,},
-  finalNumber: 0,
 }
 
 //Set up forms
@@ -114,7 +113,7 @@ function displayStuff(_name, _amount, _price){
 function viewItems(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
-  item.finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
+  finalNumber = Number(item.flatWhite.price + item.longBlack.price + item.orangeJuice.price + item.appleJuice.price + item.blueberryMuffin.price).toFixed(2);
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
   displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
   displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
@@ -179,7 +178,7 @@ function cancelAll(){
   name.amount = "";
   document.getElementById("money").value = "";
   money.amount = 0;
-  item.finalNumber = 0;
+  finalNumber = 0;
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
 }

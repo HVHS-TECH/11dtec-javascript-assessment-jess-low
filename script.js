@@ -78,16 +78,19 @@ function getName(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
     if (GET_NAME.checkValidity() === false){
+    OUTPUT.style.display = 'block';
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
+    OUTPUT.style.display = 'block';
     OUTPUT.innerHTML = "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
    } else{
   name = GET_NAME.value;
   OUTPUT.innerHTML = "";
+  OUTPUT.style.display = 'none';
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
    }
@@ -99,12 +102,14 @@ function getMoney(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
   if (GET_MONEY.checkValidity() === false){
+    OUTPUT.style.display = 'block';
     OUTPUT.innerHTML = "<h3>Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else {
   money = Number(GET_MONEY.value).toFixed(2);
   OUTPUT.innerHTML = "";
+  OUTPUT.style.display = 'none';
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
   }
@@ -123,6 +128,7 @@ function displayStuff(_name, _amount, _price){
 function viewItems(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
+  OUTPUT.style.display = 'block';
   item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price)).toFixed(2);
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
   displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
@@ -166,6 +172,7 @@ function clearAll(){
   item.finalNumber = 0;
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
+  OUTPUT.style.display = 'none';
 }
 
 //Cancel order
@@ -200,6 +207,7 @@ function cancelAll(){
   ORDER_BUTTON.style.display = 'block';
   RECEIPT_BUTTON.style.display = 'none';
   CANCEL_BUTTON.style.display = 'none';
+  OUTPUT.style.display = 'none';
 }
 
 //Show receipt

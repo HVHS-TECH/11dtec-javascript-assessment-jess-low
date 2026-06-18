@@ -129,18 +129,21 @@ function viewItems(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
   OUTPUT.style.display = 'block';
-  if (displayStuff)
   item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price)).toFixed(2);
-  OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
-  displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
-  displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
-  displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
-  displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
-  displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
-  displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
-  OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
-  RECEIPT_BUTTON.style.display = 'block';
-  CLEAR_BUTTON.style.display = 'block';
+  if (item.finalNumber > 0){
+    OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
+    displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
+    displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
+    displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
+    displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
+    displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
+    displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
+    OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
+    RECEIPT_BUTTON.style.display = 'block';
+    CLEAR_BUTTON.style.display = 'block';
+  } else {
+    OUTPUT.innerHTML = "<h3>I'm sorry, you don't have any items on your order.</h3>";
+  }
 }
 
 //Clear everything

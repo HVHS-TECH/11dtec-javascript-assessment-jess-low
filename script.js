@@ -129,7 +129,7 @@ function viewItems(){
   const CLEAR_BUTTON = document.getElementById("clear");
   const RECEIPT_BUTTON = document.getElementById("receipt");
   OUTPUT.style.display = 'block';
-  if _amo
+  if (displayStuff)
   item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price)).toFixed(2);
   OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
   displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);

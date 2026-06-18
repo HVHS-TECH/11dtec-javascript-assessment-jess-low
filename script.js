@@ -15,7 +15,18 @@ var item = {
 }
 
 //Define constants
-    const FLAT_WHITE = document.getElementById("flat");
+  const FLAT_WHITE = document.getElementById("flat");
+  const LONG_BLACK = document.getElementById("long");
+  const ORANGE_JUICE = document.getElementById("orange");
+  const APPLE_JUICE = document.getElementById("apple");
+  const BLUEBERRY_MUFFIN = document.getElementById("blueberry");
+  const CHEESE_SCONE = document.getElementById("cheese");
+  const GET_NAME = document.getElementById("name");
+  const GET_MONEY = document.getElementById("money");
+  const CLEAR_BUTTON = document.getElementById("clear");
+  const RECEIPT_BUTTON = document.getElementById("receipt");
+  const ORDER_BUTTON = document.getElementById("order");
+  const CANCEL_BUTTON = document.getElementById("cancel");
 
 
 //Set up forms
@@ -32,7 +43,6 @@ function getFlatWhite(){
   }
 }
 function getLongBlack(){
-    const LONG_BLACK = document.getElementById("long");
     if (LONG_BLACK.checkValidity() === false){
       OUTPUT.innerHTML = "";
     } else {
@@ -46,7 +56,6 @@ function getLongBlack(){
 }
 
 function getOrangeJuice(){
-    const ORANGE_JUICE = document.getElementById("orange");
     if (ORANGE_JUICE.checkValidity() === false){
       OUTPUT.innerHTML = "";
     } else {
@@ -59,7 +68,6 @@ function getOrangeJuice(){
   }
 }
 function getAppleJuice(){
-    const APPLE_JUICE = document.getElementById("apple");
     if (APPLE_JUICE.checkValidity() === false){
       OUTPUT.innerHTML = "";
     } else {
@@ -73,7 +81,6 @@ function getAppleJuice(){
 }
 
 function getBlueberryMuffin(){
-    const BLUEBERRY_MUFFIN = document.getElementById("blueberry");
     if (BLUEBERRY_MUFFIN.checkValidity() === false){
       OUTPUT.innerHTML = "";
     } else {
@@ -86,7 +93,6 @@ function getBlueberryMuffin(){
   }
 }
 function getCheeseScone(){
-    const CHEESE_SCONE = document.getElementById("cheese");
     if (CHEESE_SCONE.checkValidity() === false){
       OUTPUT.innerHTML = "";
     } else {
@@ -101,9 +107,6 @@ function getCheeseScone(){
 
 //Check if name is valid
 function getName(){
-  const GET_NAME = document.getElementById("name");
-  const CLEAR_BUTTON = document.getElementById("clear");
-  const RECEIPT_BUTTON = document.getElementById("receipt");
     if (GET_NAME.checkValidity() === false){
     OUTPUT.style.display = 'block';
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
@@ -125,9 +128,6 @@ function getName(){
 
 //Check if amount is valid
 function getMoney(){
-  const GET_MONEY = document.getElementById("money");
-  const CLEAR_BUTTON = document.getElementById("clear");
-  const RECEIPT_BUTTON = document.getElementById("receipt");
   if (GET_MONEY.checkValidity() === false){
     OUTPUT.style.display = 'block';
     OUTPUT.innerHTML = "<h3>Please enter an amount into the 'Money' section to complete your order.</h3>";
@@ -153,8 +153,6 @@ function displayStuff(_name, _amount, _price){
 
 //Show items on order
 function viewItems(){
-  const CLEAR_BUTTON = document.getElementById("clear");
-  const RECEIPT_BUTTON = document.getElementById("receipt");
   OUTPUT.style.display = 'block';
   item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price)).toFixed(2);
   if (item.finalNumber > 0){
@@ -175,16 +173,14 @@ function viewItems(){
 
 //Clear everything
 function clearAll(){
-  const RECEIPT_BUTTON = document.getElementById("receipt");
-  const CLEAR_BUTTON = document.getElementById("clear");
   OUTPUT.innerHTML = "";
-  document.getElementById("flat").value = "";
+  FLAT_WHITE.value = "";
   item.flatWhite.amount = 0;
   item.flatWhite.price = 0;
-  document.getElementById("long").value = "";
+  LONG_BLACK.value = "";
   item.longBlack.amount = 0;
   item.longBlack.price = 0;
-  document.getElementById("orange").value = "";
+  ORANGE_JUICE.value = "";
   item.orangeJuice.amount = 0;
   item.orangeJuice.price = 0;
   document.getElementById("apple").value = "";
@@ -208,9 +204,6 @@ function clearAll(){
 
 //Cancel order
 function cancelAll(){
-  const ORDER_BUTTON = document.getElementById("order");
-  const RECEIPT_BUTTON = document.getElementById("receipt");
-  const CANCEL_BUTTON = document.getElementById("cancel");
   OUTPUT.innerHTML = "";
   document.getElementById("flat").value = "";
   item.flatWhite.amount = 0;
@@ -242,12 +235,6 @@ function cancelAll(){
 
 //Show receipt
   function getReceipt(){
-  const GET_MONEY = document.getElementById("money");
-  const ORDER_BUTTON = document.getElementById("order");
-  const RECEIPT_BUTTON = document.getElementById("receipt");
-  const CLEAR_BUTTON = document.getElementById("clear");
-  const CANCEL_BUTTON = document.getElementById("cancel");
-  const GET_NAME = document.getElementById("name");
   item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price)).toFixed(2);
   if (GET_NAME.checkValidity() === false){
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";

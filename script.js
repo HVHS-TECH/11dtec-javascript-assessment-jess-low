@@ -170,8 +170,9 @@ function clearAll(){
 
 //Cancel order
 function cancelAll(){
+  const ORDER_BUTTON = document.getElementById("order");
   const RECEIPT_BUTTON = document.getElementById("receipt");
-  const CLEAR_BUTTON = document.getElementById("clear");
+  const CANCEL_BUTTON = document.getElementById("cancel");
   OUTPUT.innerHTML = "";
   document.getElementById("flat").value = "";
   item.flatWhite.amount = 0;
@@ -196,8 +197,9 @@ function cancelAll(){
   document.getElementById("money").value = "";
   money.amount = 0;
   item.finalNumber = 0;
+  ORDER_BUTTON.style.display = 'block';
   RECEIPT_BUTTON.style.display = 'none';
-  CLEAR_BUTTON.style.display = 'none';
+  CANCEL_BUTTON.style.display = 'none';
 }
 
 //Show receipt
@@ -234,9 +236,9 @@ function cancelAll(){
     displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
-    OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
-    OUTPUT.innerHTML += "<h3>Money given: $" + money + "</h3>";
-    OUTPUT.innerHTML += "<h3>Change: $" + (money - item.finalNumber).toFixed(2) + "</h3>";
+    OUTPUT.innerHTML += "<h3>Total: $" + Number(item.finalNumber).toFixed(2) + "</h3>";
+    OUTPUT.innerHTML += "<h3>Money given: $" + Number(money) + "</h3>";
+    OUTPUT.innerHTML += "<h3>Change: $" + (Number(money) - Number(item.finalNumber)).toFixed(2) + "</h3>";
     ORDER_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';

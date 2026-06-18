@@ -14,61 +14,88 @@ var item = {
   finalNumber: 0,
 }
 
+//Define constants
+    const FLAT_WHITE = document.getElementById("flat");
+
+
 //Set up forms
 function getFlatWhite(){
-    const FLAT_WHITE = document.getElementById("flat");
     if (FLAT_WHITE.checkValidity() === false){
-      OUTPUT.innerHTML += "";
+      OUTPUT.innerHTML = "";
     } else {
     item.flatWhite.amount = FLAT_WHITE.value;
     item.flatWhite.price = (5.5 * item.flatWhite.amount).toFixed(2);
+    OUTPUT.innerHTML = "";
+    OUTPUT.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
   }
 }
 function getLongBlack(){
     const LONG_BLACK = document.getElementById("long");
     if (LONG_BLACK.checkValidity() === false){
-      OUTPUT.innerHTML += "";
+      OUTPUT.innerHTML = "";
     } else {
     item.longBlack.amount = LONG_BLACK.value;
     item.longBlack.price = (5 * item.longBlack.amount);
+    OUTPUT.innerHTML = "";
+    OUTPUT.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
   }
 }
 
 function getOrangeJuice(){
     const ORANGE_JUICE = document.getElementById("orange");
     if (ORANGE_JUICE.checkValidity() === false){
-      OUTPUT.innerHTML += "";
+      OUTPUT.innerHTML = "";
     } else {
     item.orangeJuice.amount = ORANGE_JUICE.value;
     item.orangeJuice.price = (5.5 * item.orangeJuice.amount).toFixed(2);
+    OUTPUT.innerHTML = "";
+    OUTPUT.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
   }
 }
 function getAppleJuice(){
     const APPLE_JUICE = document.getElementById("apple");
     if (APPLE_JUICE.checkValidity() === false){
-      OUTPUT.innerHTML += "";
+      OUTPUT.innerHTML = "";
     } else {
     item.appleJuice.amount = APPLE_JUICE.value;
     item.appleJuice.price = (5.5 * item.appleJuice.amount).toFixed(2);
+    OUTPUT.innerHTML = "";
+    OUTPUT.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
   }
 }
 
 function getBlueberryMuffin(){
     const BLUEBERRY_MUFFIN = document.getElementById("blueberry");
     if (BLUEBERRY_MUFFIN.checkValidity() === false){
-      OUTPUT.innerHTML += "";
+      OUTPUT.innerHTML = "";
     } else {
     item.blueberryMuffin.amount = BLUEBERRY_MUFFIN.value;
     item.blueberryMuffin.price = (5 * item.blueberryMuffin.amount);
+    OUTPUT.innerHTML = "";
+    OUTPUT.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
   }
 }
 function getCheeseScone(){
     const CHEESE_SCONE = document.getElementById("cheese");
     if (CHEESE_SCONE.checkValidity() === false){
-      OUTPUT.innerHTML += "";
+      OUTPUT.innerHTML = "";
     } else {
     item.cheeseScone.amount = CHEESE_SCONE.value;
     item.cheeseScone.price = (6 * item.cheeseScone.amount);
+    OUTPUT.innerHTML = "";
+    OUTPUT.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
   }
 }
 

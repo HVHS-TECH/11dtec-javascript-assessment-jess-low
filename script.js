@@ -205,7 +205,6 @@ function cancelAll(){
   money.amount = 0;
   item.finalNumber = 0;
   ORDER_BUTTON.style.display = 'block';
-  RECEIPT_BUTTON.style.display = 'none';
   CANCEL_BUTTON.style.display = 'none';
   OUTPUT.style.display = 'none';
 }

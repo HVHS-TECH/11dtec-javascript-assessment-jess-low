@@ -252,3 +252,4 @@ function cancelAll(){
     CANCEL_BUTTON.style.display = 'block';
     }
   }
+  

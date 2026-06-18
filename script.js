@@ -167,7 +167,7 @@ function viewItems(){
     RECEIPT_BUTTON.style.display = 'block';
     CLEAR_BUTTON.style.display = 'block';
   } else {
-    OUTPUT.innerHTML = "<h3>I'm sorry, you don't have any items on your order.</h3>";
+    OUTPUT.innerHTML = "<h3>I'm sorry, you don't have any items on your order. Try pressing 'Submit' when you enter an amount.</h3>";
   }
 }
 

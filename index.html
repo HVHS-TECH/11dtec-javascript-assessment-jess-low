@@ -5,6 +5,7 @@
 <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/b/b3/New_Zealand_Topography.jpg">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://www.w3schools.com/w3css/5/w3.css" rel="stylesheet">
 <style>
     div.gallery {
         margin: 5px;
@@ -12,8 +13,13 @@
         width: 400px;
     }
     div.gallery-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        text-align: center;
         padding: 15px;
-        margin: 50px;
+        margin: 50px 100px;
+        left: 100px;
         border: 1px solid #ccc;
         width: 400px;
     }
@@ -25,10 +31,10 @@
 </head>
 <body>
 
-<div id="bar" class="w3-top w3-bar stripe w3-padding-16" style="text-align: center;">
+<div id="bar" class="w3-top w3-bar stripe w3-padding-5" style="text-align: center;">
     <h1>Café Aotearoa</h1>
 </div>
-
+<br><br>
 <div class="gallery-item">
 <h2 style="text-align: center;">Hot drinks:</h2>
 <form onsubmit="return false;">

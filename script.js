@@ -131,6 +131,8 @@ function getName(){
     RECEIPT_BUTTON.style.display = 'none';
   } else{
     name = GET_NAME.value;
+    CLEAR_BUTTON.style.display = 'block';
+    RECEIPT_BUTTON.style.display = 'block';
    }
 }
 
@@ -143,6 +145,8 @@ function getMoney(){
     RECEIPT_BUTTON.style.display = 'none';
   } else {
   money = Number(GET_MONEY.value).toFixed(2);
+    CLEAR_BUTTON.style.display = 'block';
+    RECEIPT_BUTTON.style.display = 'block';
   }
 }
 

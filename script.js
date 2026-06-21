@@ -27,6 +27,7 @@ var item = {
   const RECEIPT_BUTTON = document.getElementById("receipt");
   const ORDER_BUTTON = document.getElementById("order");
   const CANCEL_BUTTON = document.getElementById("cancel");
+  const NAME_MONEY = document.getElementById("nameMoney");
 
 
 //Set up forms
@@ -40,6 +41,7 @@ function getFlatWhite(){
     OUTPUT.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';
+    NAME_MONEY.style.display = 'none';
   }
 }
 function getLongBlack(){
@@ -52,6 +54,7 @@ function getLongBlack(){
     OUTPUT.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';
+    NAME_MONEY.style.display = 'none';
   }
 }
 
@@ -65,6 +68,7 @@ function getOrangeJuice(){
     OUTPUT.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';
+    NAME_MONEY.style.display = 'none';
   }
 }
 function getAppleJuice(){
@@ -77,6 +81,7 @@ function getAppleJuice(){
     OUTPUT.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';
+    NAME_MONEY.style.display = 'none';
   }
 }
 
@@ -90,6 +95,7 @@ function getBlueberryMuffin(){
     OUTPUT.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';
+    NAME_MONEY.style.display = 'none';
   }
 }
 function getCheeseScone(){
@@ -102,6 +108,7 @@ function getCheeseScone(){
     OUTPUT.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';
+    NAME_MONEY.style.display = 'none';
   }
 }
 
@@ -171,6 +178,7 @@ function viewItems(){
     OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
     RECEIPT_BUTTON.style.display = 'block';
     CLEAR_BUTTON.style.display = 'block';
+    NAME_MONEY.style.display = 'block';
   } else {
     OUTPUT.innerHTML = "<h3>I'm sorry, you don't have any items on your order. Try pressing 'Submit' when you enter an amount.</h3>";
   }
@@ -205,6 +213,7 @@ function clearAll(){
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
   OUTPUT.style.display = 'none';
+  NAME_MONEY.style.display = 'none';
 }
 
 //Cancel order
@@ -236,6 +245,7 @@ function cancelAll(){
   ORDER_BUTTON.style.display = 'block';
   CANCEL_BUTTON.style.display = 'none';
   OUTPUT.style.display = 'none';
+  NAME_MONEY.style.display = 'none';
 }
 
 //Show receipt
@@ -272,6 +282,7 @@ function cancelAll(){
     ORDER_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';
+    NAME_MONEY.style.display = 'none';
     CANCEL_BUTTON.style.display = 'block';
     }
   }

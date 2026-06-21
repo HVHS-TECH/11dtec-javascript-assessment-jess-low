@@ -31,6 +31,7 @@
     <h1>Café Aotearoa</h1>
 </div>
 <br><br><br>
+<h1 style="text-align: center;">Menu:</h1>
 <div class="center-gallery">
 <div class="gallery-item">
 <h2>Hot drinks:</h2>
@@ -80,8 +81,11 @@
 <br>
 </div>
 
-<div class="gallery-item">
+<br>
+<button id="order" onclick="viewItems()">View items on order:</button>
 
+  <div class="gallery-item" style="text-align: center; display: none;" id="spaceForJavaScriptOutput"></div>
+<div class="gallery-item" style="display: none;">
 <form onsubmit="return false;" >
     <label for="nameAdd" style="font-size: 20px;">Name:</label>
     <input type="text" id="name" name="nameAdd" placeholder="Name..." required>
@@ -94,11 +98,6 @@
     <input type="submit" onClick="getMoney()">
 </form>
 </div>
-<br>
-<button id="order" onclick="viewItems()">View items on order:</button>
-
-  <div class="gallery-item" style="text-align: center; display: none;" id="spaceForJavaScriptOutput"></div>
-
 <button id="receipt" onclick="getReceipt()" style="display: none;">Receipt:</button>
 <br>
 <button id="clear" onclick="clearAll()" style="display: none;">Clear All:</button>

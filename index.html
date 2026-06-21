@@ -12,6 +12,10 @@
         border: 1px solid #ccc;
         width: 400px;
     }
+    div.center-gallery {
+        display: flex;
+        justify-content: center;
+    }
     div.gallery-item {
         text-align: center;
         padding: 15px;
@@ -27,11 +31,11 @@
 </style>
 </head>
 <body>
-
 <div id="bar" class="w3-top w3-bar stripe w3-padding-5" style="text-align: center;">
     <h1>Café Aotearoa</h1>
 </div>
 <br><br>
+<div class="center-gallery">
 <div class="gallery-item">
 <h2>Hot drinks:</h2>
 <form onsubmit="return false;">
@@ -93,6 +97,7 @@
     <input type="number" id="money" name="moneyAdd" placeholder="$..." step="0.01" required>
     <input type="submit" onClick="getMoney()">
 </form>
+</div>
 </div>
 <br>
 <button id="order" onclick="viewItems()">View items on order:</button>

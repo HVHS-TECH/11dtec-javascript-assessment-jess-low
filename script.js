@@ -262,7 +262,7 @@ function cancelAll(){
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
     OUTPUT.innerHTML += "<h3>Total: $" + Number(item.finalNumber).toFixed(2) + "</h3>";
-    OUTPUT.innerHTML += "<h3>Money given: $" + Number(money) + "</h3>";
+    OUTPUT.innerHTML += "<h3>Money given: $" + Number(money).toFixed(2) + "</h3>";
     OUTPUT.innerHTML += "<h3>Change: $" + (Number(money) - Number(item.finalNumber)).toFixed(2) + "</h3>";
     ORDER_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';

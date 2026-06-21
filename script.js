@@ -119,7 +119,7 @@ function getName(){
     RECEIPT_BUTTON.style.display = 'none';
   } else if (GET_NAME.value.length < 2){
     OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h1>A name cannot be less than 2 letters long. Please enter a valid name into the 'Name' section to complete your order.</h1>"
+    OUTPUT.innerHTML = "<h3>A name cannot be less than 2 letters long. Please enter a valid name into the 'Name' section to complete your order.</h3>"
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else{

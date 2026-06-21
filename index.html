@@ -13,15 +13,12 @@
         width: 400px;
     }
     div.gallery-item {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
         text-align: center;
         padding: 15px;
         margin: 50px 100px;
         left: 100px;
         border: 1px solid #ccc;
-        width: 400px;
+        width: 500px;
     }
       .stripe {
         background-color: #5A322B !important;
@@ -36,7 +33,7 @@
 </div>
 <br><br>
 <div class="gallery-item">
-<h2 style="text-align: center;">Hot drinks:</h2>
+<h2>Hot drinks:</h2>
 <form onsubmit="return false;">
     <label for="flatWhite">$5.50: Flat White</label>
     <input type="number" id="flat" name="flatWhite" min="0" placeholder="Amount...">
@@ -52,7 +49,7 @@
 </div>
 
 <div class="gallery-item">
-<h2 style="text-align: center;">Cold drinks:</h2>
+<h2>Cold drinks:</h2>
 <form onsubmit="return false;">
     <label for="orangeJuice">$5.50: Orange Juice</label>
     <input type="number" id="orange" name="orangeJuice" min="0" placeholder="Amount...">
@@ -68,7 +65,7 @@
 </div>
 
 <div class="gallery-item">
-<h2 style="text-align: center;">Food:</h2>
+<h2>Food:</h2>
 <form onsubmit="return false;">
     <label for="blueberryMuffin">$5: Blueberry Muffin</label>
     <input type="number" id="blueberry" name="blueberryMuffin" min="0" placeholder="Amount...">
@@ -84,16 +81,15 @@
 </div>
 
 <div class="gallery-item">
-<h2>Name:</h2>
-<form onsubmit="return false;">
-    <label for="nameAdd"></label>
+
+<form onsubmit="return false;" >
+    <label for="nameAdd" style="font-size: 20px;">Name:</label>
     <input type="text" id="name" name="nameAdd" placeholder="Name..." required>
     <input type="submit" onClick="getName()">
 </form>
 
-<h2>Money:</h2>
 <form onsubmit="return false;">
-    <label for="moneyAdd">$</label>
+    <label for="moneyAdd" style="font-size: 20px;">Money: $</label>
     <input type="number" id="money" name="moneyAdd" placeholder="$..." step="0.01" required>
     <input type="submit" onClick="getMoney()">
 </form>

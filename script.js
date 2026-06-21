@@ -117,12 +117,17 @@ function getName(){
     OUTPUT.innerHTML = "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
-   } else{
-  name = GET_NAME.value;
-  OUTPUT.innerHTML = "";
-  OUTPUT.style.display = 'none';
-  RECEIPT_BUTTON.style.display = 'none';
-  CLEAR_BUTTON.style.display = 'none';
+  } else if (GET_NAME.value.length < 2){
+    OUTPUT.style.display = 'block';
+    OUTPUT.innerHTML = "<h1>A name cannot be less than 2 letters long. Please enter a valid name into the 'Name' section to complete your order.</h1>"
+    CLEAR_BUTTON.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+  } else{
+    name = GET_NAME.value;
+    OUTPUT.innerHTML = "";
+    OUTPUT.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
    }
 }
 

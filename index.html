@@ -36,6 +36,16 @@
         border: 2px solid #000000 !important;
         color: rgb(0, 0, 0) !important;
       }
+      .buttons {
+        background-color: #6c9e6a;
+        color: white !important;
+        border: 1px solid #000000 !important;
+      }
+      .buttons:hover {
+        background-color: #9ec68b;
+        border: 1px solid #000000 !important;
+        color: rgb(0, 0, 0) !important;
+      }
       body {
         background-color: rgb(138, 182, 138) !important;
       }
@@ -53,13 +63,13 @@
 <form onsubmit="return false;">
     <label for="flatWhite">$5.50: Flat White</label>
     <input type="number" id="flat" name="flatWhite" min="0" placeholder="Amount...">
-    <input type="submit" onClick="getFlatWhite()" value="Add To Order">
+    <input type="submit" onClick="getFlatWhite()" value="Add To Order" class="buttons">
 </form>
 <br>
 <form onsubmit="return false;">
     <label for="longBlack">$5: Long Black</label>
     <input type="number" id="long" name="longBlack" min="0" placeholder="Amount...">
-    <input type="submit" onClick="getLongBlack()" value="Add To Order">
+    <input type="submit" onClick="getLongBlack()" value="Add To Order" class="buttons">
 </form>
 <br>
 </div>
@@ -69,13 +79,13 @@
 <form onsubmit="return false;">
     <label for="orangeJuice">$5.50: Orange Juice</label>
     <input type="number" id="orange" name="orangeJuice" min="0" placeholder="Amount...">
-    <input type="submit" onClick="getOrangeJuice()" value="Add To Order">
+    <input type="submit" onClick="getOrangeJuice()" value="Add To Order" class="buttons">
 </form>
 <br>
 <form onsubmit="return false;">
     <label for="appleJuice">$5.50: Apple Juice</label>
     <input type="number" id="apple" name="appleJuice" min="0" placeholder="Amount...">
-    <input type="submit" onClick="getAppleJuice()" value="Add To Order">
+    <input type="submit" onClick="getAppleJuice()" value="Add To Order" class="buttons">
 </form>
 <br>
 </div>
@@ -85,13 +95,13 @@
 <form onsubmit="return false;">
     <label for="blueberryMuffin">$5: Blueberry Muffin</label>
     <input type="number" id="blueberry" name="blueberryMuffin" min="0" placeholder="Amount...">
-    <input type="submit" onClick="getBlueberryMuffin()" value="Add To Order">
+    <input type="submit" onClick="getBlueberryMuffin()" value="Add To Order" class="buttons">
 </form>
 <br>
 <form onsubmit="return false;">
     <label for="cheeseScone">$6: Cheese Scone</label>
     <input type="number" id="cheese" name="cheeseScone min="0" placeholder="Amount...">
-    <input type="submit" onClick="getCheeseScone()" value="Add To Order">
+    <input type="submit" onClick="getCheeseScone()" value="Add To Order" class="buttons">
 </form>
 <br>
 </div>
@@ -104,19 +114,19 @@
 <form onsubmit="return false;" >
     <label for="nameAdd" style="font-size: 20px;">Name:</label>
     <input type="text" id="name" name="nameAdd" placeholder="Name..." required>
-    <input type="submit" onClick="getName()">
+    <input type="submit" onClick="getName()" class="buttons">
 </form>
 <br>
 <form onsubmit="return false;">
     <label for="moneyAdd" style="font-size: 20px;">Money: $</label>
     <input type="number" id="money" name="moneyAdd" placeholder="$..." step="0.01" required>
-    <input type="submit" onClick="getMoney()">
+    <input type="submit" onClick="getMoney()" class="buttons">
 </form>
 </div>
-<button id="receipt" onclick="getReceipt()" style="display: none;">Receipt:</button>
+<button id="receipt" onclick="getReceipt()" style="display: none;" class="button">Receipt:</button>
 <br>
-<button id="clear" onclick="clearAll()" style="display: none;">Clear All:</button>
-<button id="cancel" onclick="cancelAll()" style="display: none;">Cancel Order</button>
+<button id="clear" onclick="clearAll()" style="display: none;" class="button">Clear All:</button>
+<button id="cancel" onclick="cancelAll()" style="display: none;" class="button">Cancel Order</button>
 </div>
 <script src="script.js"></script>
 </body>

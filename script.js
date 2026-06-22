@@ -13,6 +13,7 @@ var item = {
   lP: {amount: 0, price: 0,},
   blueberryMuffin: {amount: 0, price: 0,},
   cheeseScone: {amount: 0, price: 0,},
+  quicheLorraine: {amount: 0, price: 0,},
   finalNumber: 0,
 }
 
@@ -25,6 +26,7 @@ var item = {
   const L_P = document.getElementById("l");
   const BLUEBERRY_MUFFIN = document.getElementById("blueberry");
   const CHEESE_SCONE = document.getElementById("cheese");
+  const QUICHE_LORRAINE = document.getElementById("quiche");
   const GET_NAME = document.getElementById("name");
   const GET_MONEY = document.getElementById("money");
   const CLEAR_BUTTON = document.getElementById("clear");
@@ -134,6 +136,19 @@ function getCheeseScone(){
     } else {
     item.cheeseScone.amount = CHEESE_SCONE.value;
     item.cheeseScone.price = (6 * item.cheeseScone.amount).toFixed(2);
+    OUTPUT.innerHTML = "";
+    OUTPUT.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
+    NAME_MONEY.style.display = 'none';
+  }
+}
+function getQuicheLorraine(){
+    if (QUICHE_LORRAINE.checkValidity() === false){
+      OUTPUT.innerHTML = "";
+    } else {
+    item.quicheLorraine.amount = QUICHE_LORRAINE.value;
+    item.quicheLorraine.price = (8 * item.quicheLorraine.amount).toFixed(2);
     OUTPUT.innerHTML = "";
     OUTPUT.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';

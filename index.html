@@ -26,6 +26,12 @@
         color: white !important;
         border: 2px solid #000000 !important;
       }
+      .button {
+        background-color: rgb(91, 146, 125);
+      }
+      .button:hover {
+        background-color: orange;
+      }
       body {
         background-color: rgb(138, 182, 138) !important;
       }
@@ -87,7 +93,7 @@
 </div>
 
 <br>
-<button id="order" onclick="viewItems()">View items on order:</button>
+<button id="order" class="button" onclick="viewItems()">View items on order:</button>
 
   <div class="gallery-item" style="text-align: center; display: none;" id="spaceForJavaScriptOutput"></div>
 <div class="gallery-item" style="display: none;" id="nameMoney">

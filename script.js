@@ -207,7 +207,7 @@ function displayStuff(_name, _amount, _price){
 //Show items on order
 function viewItems(){
   OUTPUT.style.display = 'block';
-  item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.hotChocolate.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.lP.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price)).toFixed(2);
+  item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.hotChocolate.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.lP.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price) + Number(item.quicheLorraine.price)).toFixed(2);
   if (item.finalNumber > 0){
     OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
     displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
@@ -218,6 +218,7 @@ function viewItems(){
     displayStuff("L&P", item.lP.amount, item.lP.price);
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
+    displayStuff("Quiche Lorraine", item.quicheLorraine.amount, item.quicheLorraine.price);
     OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
     RECEIPT_BUTTON.style.display = 'block';
     CLEAR_BUTTON.style.display = 'block';
@@ -254,6 +255,9 @@ function clearAll(){
   CHEESE_SCONE.value = "";
   item.cheeseScone.amount = 0;
   item.cheeseScone.price = 0;
+  QUICHE_LORRAINE.value = "";
+  item.quicheLorraine.amount = 0;
+  item.quicheLorraine.price = 0;
   GET_NAME.value = "";
   name.amount = "";
   GET_MONEY.value = "";
@@ -292,6 +296,9 @@ function cancelAll(){
   CHEESE_SCONE.value = "";
   item.cheeseScone.amount = 0;
   item.cheeseScone.price = 0;
+  QUICHE_LORRAINE.value = "";
+  item.quicheLorraine.amount = 0;
+  item.quicheLorraine.price = 0;
   GET_NAME.value = "";
   name.amount = "";
   GET_MONEY.value = "";
@@ -305,7 +312,7 @@ function cancelAll(){
 
 //Show receipt
   function getReceipt(){
-  item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.hotChocolate.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.lP.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price)).toFixed(2);
+  item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.hotChocolate.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.lP.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price) + Number(item.quicheLorraine.price)).toFixed(2);
   if (GET_NAME.checkValidity() === false){
     OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
@@ -333,6 +340,7 @@ function cancelAll(){
     displayStuff("L&P", item.lP.amount, item.lP.price);
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
+    displayStuff("Quiche Lorraine", item.quicheLorraine.amount, item.quicheLorraine.price);
     OUTPUT.innerHTML += "<h3>Total: $" + Number(item.finalNumber).toFixed(2) + "</h3>";
     OUTPUT.innerHTML += "<h3>Money given: $" + Number(money).toFixed(2) + "</h3>";
     OUTPUT.innerHTML += "<h3>Change: $" + (Number(money) - Number(item.finalNumber)).toFixed(2) + "</h3>";

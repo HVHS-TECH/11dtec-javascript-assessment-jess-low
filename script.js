@@ -7,6 +7,7 @@ const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 var item = {
   flatWhite: {amount: 0, price: 0,},
   longBlack: {amount: 0, price: 0,},
+  hotChocolate: {amount: 0, price: 0,},
   orangeJuice: {amount: 0, price: 0,},
   appleJuice: {amount: 0, price: 0,},
   blueberryMuffin: {amount: 0, price: 0,},
@@ -17,6 +18,7 @@ var item = {
 //Define constants
   const FLAT_WHITE = document.getElementById("flat");
   const LONG_BLACK = document.getElementById("long");
+  const HOT_CHOCOLATE = document.getElementById("hot");
   const ORANGE_JUICE = document.getElementById("orange");
   const APPLE_JUICE = document.getElementById("apple");
   const BLUEBERRY_MUFFIN = document.getElementById("blueberry");
@@ -50,6 +52,19 @@ function getLongBlack(){
     } else {
     item.longBlack.amount = LONG_BLACK.value;
     item.longBlack.price = (5 * item.longBlack.amount);
+    OUTPUT.innerHTML = "";
+    OUTPUT.style.display = 'none';
+    RECEIPT_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'none';
+    NAME_MONEY.style.display = 'none';
+  }
+}
+function getHotChocolate(){
+    if (HOT_CHOCOLATE.checkValidity() === false){
+      OUTPUT.innerHTML = "";
+    } else {
+    item.hotChocolate.amount = HOT_CHOCOLATE.value;
+    item.hotChocolate.price = (5 * item.hotChocolate.amount);
     OUTPUT.innerHTML = "";
     OUTPUT.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';

@@ -221,7 +221,6 @@ function viewItems(){
     CLEAR_BUTTON.style.display = 'block';
     NAME_MONEY.style.display = 'block';
   } else {
-    OUTPUT.style.fontFamily = "Sofia";
     OUTPUT.innerHTML = "<h3>I'm sorry, you don't have any items on your order. Try pressing 'Submit' when you enter an amount.</h3>";
   }
 }

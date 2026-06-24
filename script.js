@@ -1,6 +1,6 @@
 
-const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
-document.getElementById("spaceForJavaScriptOutput").style.fontFamily = "Zen Old Micho";
+const OUTPUT = document.getElementById("spaceForJavaScriptOutput").value;
+OUTPUT.print("<p style="font-family: Zen Old Micho"></p>);
 //Store inputs
 var item = {
   flatWhite: {amount: 0, price: 0,},

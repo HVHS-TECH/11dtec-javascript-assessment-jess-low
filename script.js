@@ -1,7 +1,6 @@
 
-
-
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+
 OUTPUT.style.fontFamily = ("Zen Old Mincho");
 //Store inputs
 var item = {

@@ -158,17 +158,17 @@ function getQuicheLorraine(){
 function getName(){
     if (GET_NAME.checkValidity() === false){
     OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
     OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else if (GET_NAME.value.length < 2){
     OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3>A name cannot be less than 2 letters long. Please enter a valid name into the 'Name' section to complete your order.</h3>"
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">A name cannot be less than 2 letters long. Please enter a valid name into the 'Name' section to complete your order.</h3>"
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else{
@@ -182,7 +182,7 @@ function getName(){
 function getMoney(){
   if (GET_MONEY.checkValidity() === false){
     OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3>Please enter an amount into the 'Money' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else {
@@ -195,7 +195,7 @@ function getMoney(){
 //Display for order and receipt
 function displayStuff(_name, _amount, _price){
     if (_amount > 0) {
-      OUTPUT.innerHTML += "<p>" + _name + ": " + _amount + " = $" + _price + "</p>";
+      OUTPUT.innerHTML += "<p style=\"font-family: 'Zen Old Mincho', serif;\">" + _name + ": " + _amount + " = $" + _price + "</p>";
     } else {
       OUTPUT.innerHTML += "";
     }
@@ -206,7 +206,7 @@ function viewItems(){
   OUTPUT.style.display = 'block';
   item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.hotChocolate.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.lP.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price) + Number(item.quicheLorraine.price)).toFixed(2);
   if (item.finalNumber > 0){
-    OUTPUT.innerHTML = "<h3>These are the items on your order:</h3>";
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";
     displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
     displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
     displayStuff("Hot Chocolate", item.hotChocolate.amount, item.hotChocolate.price);
@@ -216,7 +216,7 @@ function viewItems(){
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
     displayStuff("Quiche Lorraine", item.quicheLorraine.amount, item.quicheLorraine.price);
-    OUTPUT.innerHTML += "<h3>Total: $" + item.finalNumber + "</h3>";
+    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + item.finalNumber + "</h3>";
     RECEIPT_BUTTON.style.display = 'block';
     CLEAR_BUTTON.style.display = 'block';
     NAME_MONEY.style.display = 'block';
@@ -311,24 +311,24 @@ function cancelAll(){
   function getReceipt(){
   item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.hotChocolate.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.lP.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price) + Number(item.quicheLorraine.price)).toFixed(2);
   if (GET_NAME.checkValidity() === false){
-    OUTPUT.innerHTML = "<h3>Please enter a name into the 'Name' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
-    OUTPUT.innerHTML = "<h3>Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else if (GET_MONEY.checkValidity() === false){
-    OUTPUT.innerHTML = "<h3>Please enter an amount into the 'Money' section to complete your order.</h3>";
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else if (Number(item.finalNumber) > Number(money)){
-    OUTPUT.innerHTML = "<h1>I'm sorry, you don't have enough money to complete this purchase.</h1>";
+    OUTPUT.innerHTML = "<h1 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, you don't have enough money to complete this purchase.</h1>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
   } else {
-    OUTPUT.innerHTML = "<h2> Name: " + name + "</h2>";
-    OUTPUT.innerHTML += "<h3>These are the items on your receipt:</h3>";
+    OUTPUT.innerHTML = "<h2 style=\"font-family: 'Zen Old Mincho', serif;\"> Name: " + name + "</h2>";
+    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your receipt:</h3>";
     displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
     displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
     displayStuff("Hot Chocolate", item.hotChocolate.amount, item.hotChocolate.price);
@@ -338,9 +338,9 @@ function cancelAll(){
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
     displayStuff("Quiche Lorraine", item.quicheLorraine.amount, item.quicheLorraine.price);
-    OUTPUT.innerHTML += "<h3>Total: $" + Number(item.finalNumber).toFixed(2) + "</h3>";
-    OUTPUT.innerHTML += "<h3>Money given: $" + Number(money).toFixed(2) + "</h3>";
-    OUTPUT.innerHTML += "<h3>Change: $" + (Number(money) - Number(item.finalNumber)).toFixed(2) + "</h3>";
+    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + Number(item.finalNumber).toFixed(2) + "</h3>";
+    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Money given: $" + Number(money).toFixed(2) + "</h3>";
+    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Change: $" + (Number(money) - Number(item.finalNumber)).toFixed(2) + "</h3>";
     ORDER_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';

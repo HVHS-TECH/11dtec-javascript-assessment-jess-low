@@ -1,7 +1,7 @@
 
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 
-OUTPUT.style.fontFamily = ("Zen Old Mincho");
+OUTPUT.style.fontFamily = "Zen Old Mincho";
 //Store inputs
 var item = {
   flatWhite: {amount: 0, price: 0,},

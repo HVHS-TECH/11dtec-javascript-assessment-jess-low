@@ -222,7 +222,7 @@ function viewItems(){
     CLEAR_BUTTON.style.display = 'block';
     NAME_MONEY.style.display = 'block';
   } else {
-    OUTPUT.innerHTML = "<h3>I'm sorry, you don't have any items on your order. Try pressing 'Submit' when you enter an amount.</h3>";
+    OUTPUT.innerHTML = "<h3 style="font-family: Zen Old Micho;">I'm sorry, you don't have any items on your order. Try pressing 'Submit' when you enter an amount.</h3>";
   }
 }
 

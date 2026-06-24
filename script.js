@@ -1,5 +1,6 @@
 
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
+OUTPUT.classList.add("output-text")
 //Store inputs
 var item = {
   flatWhite: {amount: 0, price: 0,},

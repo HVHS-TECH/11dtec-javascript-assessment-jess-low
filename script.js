@@ -36,11 +36,7 @@ var item = {
 //Set up forms
 function getFlatWhite(){
     if (FLAT_WHITE.checkValidity() === false){
-      OUTPUT.innerHTML = "";
-    } else if (FLAT_WHITE.value > 50) {
-    OUTPUT.style.display = 'block';
-    
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't make that amount of flat whites without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
+    OUTPUT.innerHTML = "";
     } else {
     item.flatWhite.amount = FLAT_WHITE.value;
     item.flatWhite.price = (5.5 * item.flatWhite.amount).toFixed(2);
@@ -54,9 +50,6 @@ function getFlatWhite(){
 function getLongBlack(){
     if (LONG_BLACK.checkValidity() === false){
       OUTPUT.innerHTML = "";
-    } else if (LONG_BLACK.value > 50) {
-    OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't make that amount of long blacks without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
     } else {
     item.longBlack.amount = LONG_BLACK.value;
     item.longBlack.price = (5 * item.longBlack.amount).toFixed(2);
@@ -70,9 +63,6 @@ function getLongBlack(){
 function getHotChocolate(){
     if (HOT_CHOCOLATE.checkValidity() === false){
       OUTPUT.innerHTML = "";
-    } else if (HOT_CHOCOLATE.value > 50) {
-    OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't make that amount of hot chocolates without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
     } else {
     item.hotChocolate.amount = HOT_CHOCOLATE.value;
     item.hotChocolate.price = (5 * item.hotChocolate.amount).toFixed(2);
@@ -87,9 +77,6 @@ function getHotChocolate(){
 function getOrangeJuice(){
     if (ORANGE_JUICE.checkValidity() === false){
       OUTPUT.innerHTML = "";
-    } else if (ORANGE_JUICE.value > 50) {
-    OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't provide that amount of orange juice without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
     } else {
     item.orangeJuice.amount = ORANGE_JUICE.value;
     item.orangeJuice.price = (5.5 * item.orangeJuice.amount).toFixed(2);
@@ -103,9 +90,6 @@ function getOrangeJuice(){
 function getAppleJuice(){
     if (APPLE_JUICE.checkValidity() === false){
       OUTPUT.innerHTML = "";
-    } else if (APPLE_JUICE.value > 50) {
-    OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't provide that amount of apple juice without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
     } else {
     item.appleJuice.amount = APPLE_JUICE.value;
     item.appleJuice.price = (5.5 * item.appleJuice.amount).toFixed(2);
@@ -119,9 +103,6 @@ function getAppleJuice(){
 function getLP(){
     if (L_P.checkValidity() === false){
       OUTPUT.innerHTML = "";
-    } else if (L_P.value > 50) {
-    OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't provide that amount of L&P without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
     } else {
     item.lP.amount = L_P.value;
     item.lP.price = (4 * item.lP.amount).toFixed(2);

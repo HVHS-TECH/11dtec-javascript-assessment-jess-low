@@ -26,18 +26,10 @@
         background-color: #26631a !important;
     }
     div.gallery-items {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-        max-width: 500px;
-    }
-    div.gallery-items label {
-        text-align: left;
-        margin-right: 10px;
-    }
-    div.gallery-items input {
-        flex-grow: 1;
+        text-align: right;
+        color: white !important;
+        width: 100%;
+        background-color: #26631a !important;
     }
       .stripe {
         background-color: #26631a !important;
@@ -157,6 +149,7 @@
 <button id="order" class="button" onclick="viewItems()">View items on order:</button>
 <div class="gallery-item" style="text-align: center; display: none;" id="spaceForJavaScriptOutput"></div>
 <div class="gallery-item" style="display: none;" id="nameMoney">
+<div class="gallery-items">
 <form onsubmit="return false;" >
     <label for="nameAdd" style="font-size: 20px; font-family: Amita;">Name:</label>
     <input type="text" id="name" name="nameAdd" placeholder="Name..." required>

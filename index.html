@@ -26,8 +26,8 @@
         background-color: #26631a !important;
     }
     div.gallery-items {
+        padding: 2%;
         text-align: right;
-        border: 1px solid #000000 !important;
         color: white !important;
         width: 100%;
         background-color: #26631a !important;
@@ -124,6 +124,7 @@
 
 <div class="gallery-item">
 <h2 style="font-family: Amita;">Food:</h2>
+<div class="gallery-items">
 <form onsubmit="return false;">
     <label for="blueberryMuffin" style="font-size: 18px; font-family: Amita;">$5: Blueberry Muffin</label>
     <input type="number" style="width: 200px;" id="blueberry" name="blueberryMuffin" min="1" max="15" placeholder="Amount...">
@@ -143,6 +144,7 @@
 </form>
 <br>
 </div>
+</div>
 
 <br>
 <button id="order" class="button" onclick="viewItems()">View items on order:</button>
@@ -159,6 +161,7 @@
     <input type="number" id="money" name="moneyAdd" placeholder="$..." step="0.01" required>
     <input type="submit" onClick="getMoney()" class="buttons">
 </form>
+</div>
 </div>
 <button id="receipt" onclick="getReceipt()" style="display: none;" class="button">Receipt:</button>
 <br>

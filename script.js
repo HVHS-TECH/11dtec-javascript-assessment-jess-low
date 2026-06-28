@@ -39,6 +39,7 @@ function getFlatWhite(){
       OUTPUT.innerHTML = "";
     } else if (FLAT_WHITE.value > 50) {
     OUTPUT.style.display = 'block';
+    
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't make that amount of flat whites without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
     } else {
     item.flatWhite.amount = FLAT_WHITE.value;

@@ -38,7 +38,7 @@ function getFlatWhite(){
     if (FLAT_WHITE.checkValidity() === false){
       OUTPUT.innerHTML = "";
     } else if (FLAT_WHITE.value > 50) {
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't .</h3>";
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't make that amount of flat whites without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
     } else {
     item.flatWhite.amount = FLAT_WHITE.value;
     item.flatWhite.price = (5.5 * item.flatWhite.amount).toFixed(2);
@@ -52,6 +52,8 @@ function getFlatWhite(){
 function getLongBlack(){
     if (LONG_BLACK.checkValidity() === false){
       OUTPUT.innerHTML = "";
+    } else if (LONG_BLACK.value > 50) {
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't make that amount of long blacks without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
     } else {
     item.longBlack.amount = LONG_BLACK.value;
     item.longBlack.price = (5 * item.longBlack.amount).toFixed(2);
@@ -65,6 +67,8 @@ function getLongBlack(){
 function getHotChocolate(){
     if (HOT_CHOCOLATE.checkValidity() === false){
       OUTPUT.innerHTML = "";
+    } else if (HOT_CHOCOLATE.value > 50) {
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't make that amount of hot chocolates without prior notice. Please contact us 24 hours in advance for an order this size.</h3>";
     } else {
     item.hotChocolate.amount = HOT_CHOCOLATE.value;
     item.hotChocolate.price = (5 * item.hotChocolate.amount).toFixed(2);

@@ -37,6 +37,8 @@ var item = {
 function getFlatWhite(){
     if (FLAT_WHITE.checkValidity() === false){
       OUTPUT.innerHTML = "";
+    } else if (FLAT_WHITE.value > 50) {
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, we can't .</h3>";
     } else {
     item.flatWhite.amount = FLAT_WHITE.value;
     item.flatWhite.price = (5.5 * item.flatWhite.amount).toFixed(2);

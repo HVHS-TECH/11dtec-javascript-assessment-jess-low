@@ -156,30 +156,16 @@ function getQuicheLorraine(){
 
 //Check if name is valid
 function getName(){
-    if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
-    OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
-    CLEAR_BUTTON.style.display = 'none';
-    RECEIPT_BUTTON.style.display = 'none';
-  } else{
     name = GET_NAME.value;
     CLEAR_BUTTON.style.display = 'block';
     RECEIPT_BUTTON.style.display = 'block';
-   }
 }
 
 //Check if amount is valid
 function getMoney(){
-  if (GET_MONEY.checkValidity() === false){
-    OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter an amount into the 'Money' section to complete your order.</h3>";
-    CLEAR_BUTTON.style.display = 'none';
-    RECEIPT_BUTTON.style.display = 'none';
-  } else {
   money = Number(GET_MONEY.value).toFixed(2);
     CLEAR_BUTTON.style.display = 'block';
     RECEIPT_BUTTON.style.display = 'block';
-  }
 }
 
 //Display for order and receipt

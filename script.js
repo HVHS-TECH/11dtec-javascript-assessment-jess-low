@@ -156,12 +156,7 @@ function getQuicheLorraine(){
 
 //Check if name is valid
 function getName(){
-    if (GET_NAME.checkValidity() === false){
-    OUTPUT.style.display = 'block';
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter a name into the 'Name' section to complete your order.</h3>";
-    CLEAR_BUTTON.style.display = 'none';
-    RECEIPT_BUTTON.style.display = 'none';
-  } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
+    if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
     OUTPUT.style.display = 'block';
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
@@ -310,11 +305,7 @@ function cancelAll(){
 //Show receipt
   function getReceipt(){
   item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.hotChocolate.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.lP.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price) + Number(item.quicheLorraine.price)).toFixed(2);
-  if (GET_NAME.checkValidity() === false){
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter a name into the 'Name' section to complete your order.</h3>";
-    CLEAR_BUTTON.style.display = 'none';
-    RECEIPT_BUTTON.style.display = 'none';
-  } else if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
+  if (/[^a-zA-Z' .-]/g.test(GET_NAME.value)){
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Numbers or symbols are not part of a valid name. Please enter a valid name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';

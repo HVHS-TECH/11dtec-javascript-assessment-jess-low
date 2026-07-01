@@ -166,6 +166,11 @@ function getMoney(){
   money = Number(GET_MONEY.value).toFixed(2);
     CLEAR_BUTTON.style.display = 'block';
     RECEIPT_BUTTON.style.display = 'block';
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";
+    fastDisplay()
+    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + item.finalNumber + "</h3>";
+    RECEIPT_BUTTON.style.display = 'block';
+    CLEAR_BUTTON.style.display = 'block';
 }
 
 //Display for order and receipt

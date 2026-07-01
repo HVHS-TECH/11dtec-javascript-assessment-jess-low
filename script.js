@@ -235,56 +235,22 @@ function clearCancel(){
   GET_MONEY.value = "";
   money.amount = 0;
   item.finalNumber = 0;
-
+  OUTPUT.style.display = 'none';
+  NAME_MONEY.style.display = 'none';
 }
 
 //Clear everything
 function clearAll(){
+  clearCancel()
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
-  OUTPUT.style.display = 'none';
-  NAME_MONEY.style.display = 'none';
 }
 
 //Cancel order
 function cancelAll(){
-  OUTPUT.innerHTML = "";
-  FLAT_WHITE.value = "";
-  item.flatWhite.amount = 0;
-  item.flatWhite.price = 0;
-  LONG_BLACK.value = "";
-  item.longBlack.amount = 0;
-  item.longBlack.price = 0;
-  HOT_CHOCOLATE.value = "";
-  item.hotChocolate.amount = 0;
-  item.hotChocolate.price = 0;
-  ORANGE_JUICE.value = "";
-  item.orangeJuice.amount = 0;
-  item.orangeJuice.price = 0;
-  APPLE_JUICE.value = "";
-  item.appleJuice.amount = 0;
-  item.appleJuice.price = 0;
-  L_P.value = "";
-  item.lP.amount = 0;
-  item.lP.price = 0;
-  BLUEBERRY_MUFFIN.value = "";
-  item.blueberryMuffin.amount = 0;
-  item.blueberryMuffin.price = 0;
-  CHEESE_SCONE.value = "";
-  item.cheeseScone.amount = 0;
-  item.cheeseScone.price = 0;
-  QUICHE_LORRAINE.value = "";
-  item.quicheLorraine.amount = 0;
-  item.quicheLorraine.price = 0;
-  GET_NAME.value = "";
-  name.amount = "";
-  GET_MONEY.value = "";
-  money.amount = 0;
-  item.finalNumber = 0;
+  clearCancel()
   ORDER_BUTTON.style.display = 'block';
   CANCEL_BUTTON.style.display = 'none';
-  OUTPUT.style.display = 'none';
-  NAME_MONEY.style.display = 'none';
 }
 
 //Show receipt

@@ -270,7 +270,7 @@ function cancelAll(){
     RECEIPT_BUTTON.style.display = 'none';
   } else if (Number(item.finalNumber) > Number(money)){
     OUTPUT.innerHTML = "<h1 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, you don't have enough money to complete this purchase.</h1>";
-    CLEAR_BUTTON.style.display = 'none';
+    CLEAR_BUTTON.style.display = 'block';
     RECEIPT_BUTTON.style.display = 'none';
   } else {
     OUTPUT.innerHTML = "<h2 style=\"font-family: 'Zen Old Mincho', serif;\"> Name: " + name + "</h2>";

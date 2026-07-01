@@ -201,8 +201,7 @@ function viewItems(){
   }
 }
 
-//Clear everything
-function clearAll(){
+function clearCancel(){
   OUTPUT.innerHTML = "";
   FLAT_WHITE.value = "";
   item.flatWhite.amount = 0;
@@ -236,6 +235,11 @@ function clearAll(){
   GET_MONEY.value = "";
   money.amount = 0;
   item.finalNumber = 0;
+
+}
+
+//Clear everything
+function clearAll(){
   RECEIPT_BUTTON.style.display = 'none';
   CLEAR_BUTTON.style.display = 'none';
   OUTPUT.style.display = 'none';

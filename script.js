@@ -177,12 +177,7 @@ function displayStuff(_name, _amount, _price){
     }
 }
 
-//Show items on order
-function viewItems(){
-  OUTPUT.style.display = 'block';
-  item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.hotChocolate.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.lP.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price) + Number(item.quicheLorraine.price)).toFixed(2);
-  if (item.finalNumber > 0){
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";
+function fastDisplay(){
     displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
     displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
     displayStuff("Hot Chocolate", item.hotChocolate.amount, item.hotChocolate.price);
@@ -192,6 +187,15 @@ function viewItems(){
     displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
     displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
     displayStuff("Quiche Lorraine", item.quicheLorraine.amount, item.quicheLorraine.price);
+}
+
+//Show items on order
+function viewItems(){
+  OUTPUT.style.display = 'block';
+  item.finalNumber = Number(Number(item.flatWhite.price) + Number(item.longBlack.price) + Number(item.hotChocolate.price) + Number(item.orangeJuice.price) + Number(item.appleJuice.price) + Number(item.lP.price) + Number(item.blueberryMuffin.price) + Number(item.cheeseScone.price) + Number(item.quicheLorraine.price)).toFixed(2);
+  if (item.finalNumber > 0){
+    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";
+    fastDisplay()
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + item.finalNumber + "</h3>";
     RECEIPT_BUTTON.style.display = 'block';
     CLEAR_BUTTON.style.display = 'block';
@@ -271,15 +275,7 @@ function cancelAll(){
   } else {
     OUTPUT.innerHTML = "<h2 style=\"font-family: 'Zen Old Mincho', serif;\"> Name: " + name + "</h2>";
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your receipt:</h3>";
-    displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
-    displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
-    displayStuff("Hot Chocolate", item.hotChocolate.amount, item.hotChocolate.price);
-    displayStuff("Orange Juice", item.orangeJuice.amount, item.orangeJuice.price);
-    displayStuff("Apple Juice", item.appleJuice.amount, item.appleJuice.price);
-    displayStuff("L&P", item.lP.amount, item.lP.price);
-    displayStuff("Blueberry Muffin", item.blueberryMuffin.amount, item.blueberryMuffin.price);
-    displayStuff("Cheese Scone", item.cheeseScone.amount, item.cheeseScone.price);
-    displayStuff("Quiche Lorraine", item.quicheLorraine.amount, item.quicheLorraine.price);
+    fastDisplay()
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + Number(item.finalNumber).toFixed(2) + "</h3>";
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Money given: $" + Number(money).toFixed(2) + "</h3>";
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Change: $" + (Number(money) - Number(item.finalNumber)).toFixed(2) + "</h3>";

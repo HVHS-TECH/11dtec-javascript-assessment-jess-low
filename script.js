@@ -64,7 +64,8 @@ var item = {
     BLUEBERRY_MUFFIN.setCustomValidity('We can\'t provide that amount of Blueberry Muffins without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
-  const CHEESE_SCONE.addEventListener('input', () => {
+  const CHEESE_SCONE = document.getElementById("cheese");
+  CHEESE_SCONE.addEventListener('input', () => {
     CHEESE_SCONE.setCustomValidity('');
   if (CHEESE_SCONE.validity.rangeOverflow) {
     CHEESE_SCONE.setCustomValidity('We can\'t provide that amount of Cheese Scones without prior notice. Please contact us 24 hours in advance for large orders.')
@@ -74,7 +75,7 @@ var item = {
   QUICHE_LORRAINE.addEventListener('input', () => {
     QUICHE_LORRAINE.setCustomValidity('');
   if (QUICHE_LORRAINE.validity.rangeOverflow) {
-    QUICHE_LORRAINE.setCustomValidity('We can\'t provide that amount of Flat Whites without prior notice. Please contact us 24 hours in advance for large orders.')
+    QUICHE_LORRAINE.setCustomValidity('We can\'t provide that amount of Quiche Lorraines without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
   const GET_NAME = document.getElementById("name");

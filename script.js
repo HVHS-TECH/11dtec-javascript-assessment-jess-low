@@ -16,6 +16,12 @@ var item = {
 
 //Define constants
   const FLAT_WHITE = document.getElementById("flat");
+  FLAT_WHITE.addEventListener('input', () => {
+    FLAT_WHITE.setCustomValidity('');
+  if (FLAT_WHITE.validity.rangeOverflow) {
+    FLAT_WHITE.setCustomValidity('We can't provide that amount of items without prior notice. Please contact us 24 hours in advance for large orders.')
+  }
+  });
   const LONG_BLACK = document.getElementById("long");
   const HOT_CHOCOLATE = document.getElementById("hot");
   const ORANGE_JUICE = document.getElementById("orange");

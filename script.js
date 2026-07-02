@@ -19,35 +19,35 @@ var item = {
   FLAT_WHITE.addEventListener('input', () => {
     FLAT_WHITE.setCustomValidity('');
   if (FLAT_WHITE.validity.rangeOverflow) {
-    FLAT_WHITE.setCustomValidity('We can\'t provide that amount of Flat Whites without prior notice. Please contact us 24 hours in advance for large orders.')
+    FLAT_WHITE.setCustomValidity('We can\'t provide that amount of flat whites without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
   const LONG_BLACK = document.getElementById("long");
   LONG_BLACK.addEventListener('input', () => {
     LONG_BLACK.setCustomValidity('');
   if (LONG_BLACK.validity.rangeOverflow) {
-    LONG_BLACK.setCustomValidity('We can\'t provide that amount of Long Blacks without prior notice. Please contact us 24 hours in advance for large orders.')
+    LONG_BLACK.setCustomValidity('We can\'t provide that amount of long blacks without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
   const HOT_CHOCOLATE = document.getElementById("hot");
   HOT_CHOCOLATE.addEventListener('input', () => {
     HOT_CHOCOLATE.setCustomValidity('');
   if (HOT_CHOCOLATE.validity.rangeOverflow) {
-    HOT_CHOCOLATE.setCustomValidity('We can\'t provide that amount of Hot Chocolates without prior notice. Please contact us 24 hours in advance for large orders.')
+    HOT_CHOCOLATE.setCustomValidity('We can\'t provide that amount of hot chocolates without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
   const ORANGE_JUICE = document.getElementById("orange");
   ORANGE_JUICE.addEventListener('input', () => {
     ORANGE_JUICE.setCustomValidity('');
   if (ORANGE_JUICE.validity.rangeOverflow) {
-    ORANGE_JUICE.setCustomValidity('We can\'t provide that amount of Orange Juices without prior notice. Please contact us 24 hours in advance for large orders.')
+    ORANGE_JUICE.setCustomValidity('We can\'t provide that amount of orange juices without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
   const APPLE_JUICE = document.getElementById("apple");
   APPLE_JUICE.addEventListener('input', () => {
     APPLE_JUICE.setCustomValidity('');
   if (APPLE_JUICE.validity.rangeOverflow) {
-    APPLE_JUICE.setCustomValidity('We can\'t provide that amount of Apple Juices without prior notice. Please contact us 24 hours in advance for large orders.')
+    APPLE_JUICE.setCustomValidity('We can\'t provide that amount of apple juices without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
   const L_P = document.getElementById("l");
@@ -61,21 +61,21 @@ var item = {
   BLUEBERRY_MUFFIN.addEventListener('input', () => {
     BLUEBERRY_MUFFIN.setCustomValidity('');
   if (BLUEBERRY_MUFFIN.validity.rangeOverflow) {
-    BLUEBERRY_MUFFIN.setCustomValidity('We can\'t provide that amount of Blueberry Muffins without prior notice. Please contact us 24 hours in advance for large orders.')
+    BLUEBERRY_MUFFIN.setCustomValidity('We can\'t provide that amount of blueberry muffins without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
   const CHEESE_SCONE = document.getElementById("cheese");
   CHEESE_SCONE.addEventListener('input', () => {
     CHEESE_SCONE.setCustomValidity('');
   if (CHEESE_SCONE.validity.rangeOverflow) {
-    CHEESE_SCONE.setCustomValidity('We can\'t provide that amount of Cheese Scones without prior notice. Please contact us 24 hours in advance for large orders.')
+    CHEESE_SCONE.setCustomValidity('We can\'t provide that amount of cheese scones without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
   const QUICHE_LORRAINE = document.getElementById("quiche");
   QUICHE_LORRAINE.addEventListener('input', () => {
     QUICHE_LORRAINE.setCustomValidity('');
   if (QUICHE_LORRAINE.validity.rangeOverflow) {
-    QUICHE_LORRAINE.setCustomValidity('We can\'t provide that amount of Quiche Lorraines without prior notice. Please contact us 24 hours in advance for large orders.')
+    QUICHE_LORRAINE.setCustomValidity('We can\'t provide that amount of quiche Lorraines without prior notice. Please contact us 24 hours in advance for large orders.')
   }
   });
   const GET_NAME = document.getElementById("name");

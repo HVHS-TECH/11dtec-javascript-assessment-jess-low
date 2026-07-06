@@ -88,10 +88,10 @@ var item = {
   const CONT = document.getElementById("contactDropdown");
 
 function disp(){
-  if (CONT.style.display = 'block';){
-    CONT.style.display = 'none';
-  } else {
+  if (CONT.style.display = 'none'){
     CONT.style.display = 'block';
+  } else {
+    CONT.style.display = 'none';
   }
 }
 //Set up forms

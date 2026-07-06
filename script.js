@@ -97,6 +97,7 @@ function disp(){
 }
 function copy(){
   COPY.select();
+  COPY.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(COPY.value);
   alert(COPY.value + "copied");
 }

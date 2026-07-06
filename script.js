@@ -88,9 +88,9 @@ var item = {
   const CONT = document.getElementById("contactDropdown");
 
 function disp(){
-  if (CONT.style.display = 'none'){
+  if (CONT.style.display === 'none'){
     CONT.style.display = 'block';
-  } else if (CONT.style.display = 'block'){
+  } else {
     CONT.style.display = 'none';
   }
 }

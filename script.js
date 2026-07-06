@@ -85,8 +85,15 @@ var item = {
   const ORDER_BUTTON = document.getElementById("order");
   const CANCEL_BUTTON = document.getElementById("cancel");
   const NAME_MONEY = document.getElementById("nameMoney");
+  const CONT = document.getElementById("contactDropdown");
 
-
+function disp(){
+  if (CONT.style.display = 'block';){
+    CONT.style.display = 'none';
+  } else {
+    CONT.style.display = 'block';
+  }
+}
 //Set up forms
 function getFlatWhite(){
     if (FLAT_WHITE.checkValidity() === false){

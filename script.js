@@ -86,6 +86,7 @@ var item = {
   const CANCEL_BUTTON = document.getElementById("cancel");
   const NAME_MONEY = document.getElementById("nameMoney");
   const CONT = document.getElementById("contactDropdown");
+  const COPY = document.getElementById("copy");
 
 function disp(){
   if (CONT.style.display === 'none'){
@@ -93,6 +94,11 @@ function disp(){
   } else {
     CONT.style.display = 'none';
   }
+}
+function copy(){
+  COPY.select();
+  navigator.clipboard.writeText(COPY.value);
+  alert(COPY.value + "copied");
 }
 //Set up forms
 function getFlatWhite(){

@@ -90,7 +90,7 @@ var item = {
 function disp(){
   if (CONT.style.display = 'none'){
     CONT.style.display = 'block';
-  } else {
+  } else if (CONT.style.display = 'block'){
     CONT.style.display = 'none';
   }
 }

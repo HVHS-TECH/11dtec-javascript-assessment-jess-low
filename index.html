@@ -64,20 +64,29 @@
       body {
         background-color: rgb(138, 182, 138) !important;
       }
+      .dropdown-container {
+        position: relative;
+        margin-top: 15px;
+      }
       .dropdown-content {
         display: none;
+        position: absolute;
+        right: 20px;
+        top: 65px;
       }
 </style>
 </head>
 <body>
 <div id="bar" class="w3-top w3-bar stripe w3-padding-5" style="text-align: center;">
-    <p style="width: 10%;" class="w3-left w3-bar-item"></p>
-    <h1 style="font-family: Princess Sofia; font-size: 50px; width: 80%;" class="w3-bar-item">Café Aotearoa</h1>
-    <p style="width: 10%;" class="w3-right w3-bar-item w3-button" onclick="disp()">Contact:</p>
+    <p style="width: 20%;" class="w3-left w3-bar-item"></p>
+    <h1 style="font-family: Princess Sofia; font-size: 50px; width: 60%;" class="w3-bar-item">Café Aotearoa</h1>
+    <div class="dropdown-container">
+    <p class="w3-right w3-bar-item w3-button" style="width: 20%;" onclick="disp()">Contact:</p>
     <div id="contactDropdown" class="dropdown-content">
-        <input type="text" value="cafe.aotearoa@exampledomain.com" id="copy">
+        <input type="text" value="cafe.aotearoa@exampledomain.com" style="display: none;" id="copy">
         <button onclick="copy()">cafe.aotearoa@exampledomain.com</button>
     </div>
+</div>
 </div>
 <p style="font-size: 130px;"></p>
 <h1 style="text-align: center; font-family: Sofia;">Menu:</h1>

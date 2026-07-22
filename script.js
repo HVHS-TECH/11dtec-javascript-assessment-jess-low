@@ -107,7 +107,7 @@ function copy(){
 }
 
 function closePopup(){
-POPUP.style.display = none;
+POPUP.close();
 }
 //Set up forms
 function getFlatWhite(){

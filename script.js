@@ -1,4 +1,4 @@
-
+//Where to summon JavaScript to
 const OUTPUT = document.getElementById("spaceForJavaScriptOutput");
 //Store inputs
 var item = {

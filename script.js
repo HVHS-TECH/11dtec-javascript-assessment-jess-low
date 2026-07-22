@@ -87,7 +87,7 @@ var item = {
   const NAME_MONEY = document.getElementById("nameMoney");
   const CONT = document.getElementById("contactDropdown");
   const COPY = document.getElementById("copy");
-  const POPUP = document.getElementById("popover");
+  const POPUP = document.getElementById("popup");
 //Define functions
 
 //Dropdown code

@@ -87,7 +87,9 @@ var item = {
   const NAME_MONEY = document.getElementById("nameMoney");
   const CONT = document.getElementById("contactDropdown");
   const COPY = document.getElementById("copy");
+//Define functions
 
+//Dropdown code
 function disp(){
   if (CONT.style.display === 'none'){
     CONT.style.display = 'block';
@@ -95,6 +97,7 @@ function disp(){
     CONT.style.display = 'none';
   }
 }
+//Copy email code
 function copy(){
   COPY.select();
   COPY.setSelectionRange(0, 99999);
@@ -242,7 +245,7 @@ function getMoney(){
     CLEAR_BUTTON.style.display = 'block';
 }
 
-//Display for order and receipt
+//Display for order and receipt if information entered
 function displayStuff(_name, _amount, _price){
     if (_amount > 0) {
       OUTPUT.innerHTML += "<p style=\"font-family: 'Zen Old Mincho', serif;\">" + _name + ": " + _amount + " = $" + _price + "</p>";
@@ -251,6 +254,7 @@ function displayStuff(_name, _amount, _price){
     }
 }
 
+//Display for order and receipt
 function fastDisplay(){
     displayStuff("Flat White", item.flatWhite.amount, item.flatWhite.price);
     displayStuff("Long Black", item.longBlack.amount, item.longBlack.price);
@@ -279,6 +283,7 @@ function viewItems(){
   }
 }
 
+//Code for both clearing forms and cancelling order
 function clearCancel(){
   OUTPUT.innerHTML = "";
   FLAT_WHITE.value = "";

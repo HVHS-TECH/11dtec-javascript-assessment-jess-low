@@ -189,6 +189,7 @@
 <button id="order" class="button" popovertarget="popup" onclick="viewItems()">View items on order:</button>
 <!--Popup-->
 <dialog id="popup" popover>
+<button id="close" popovertarget="popup" style="font-size: 25px;" class="w3-right" popovertargetaction="close">X</button>
 <!--Summon JavaScript-->
 <div class="gallery-item" style="text-align: center; display: none;" id="spaceForJavaScriptOutput"></div>
 <!--Order completion buttons/forms cont.-->
@@ -212,7 +213,6 @@
 <!--Cancel-->
 <button id="clear" onclick="clearAll()" style="display: none;" class="button">Clear All:</button>
 <button id="cancel" onclick="cancelAll()" style="display: none;" class="button">Cancel Order</button>
-<button id="close" popovertarget="popup" popovertargetaction="close">Close</button>
 </form>
 </dialog>
 

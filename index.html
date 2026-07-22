@@ -54,14 +54,23 @@
         color: rgb(0, 0, 0) !important;
       }
       .buttons {
-        background-color: #6c9e6a;
+        background-color: #6c9e6a !important;
         color: white !important;
         border: 1px solid #000000 !important;
       }
       .buttons:hover {
-        background-color: #9ec68b;
+        background-color: #9ec68b !important;
         border: 1px solid #000000 !important;
         color: rgb(0, 0, 0) !important;
+      }
+      .third {
+        background-color: #26631a !important;
+        color: white !important;
+      }
+      .third:hover {
+        background-color: #377a16 !important;
+        color: white !important;
+        border: 1px solid #000000 !important;
       }
       body {
         background-color: rgb(138, 182, 138) !important;
@@ -82,11 +91,12 @@
     <p style="width: 20%;" class="w3-left w3-bar-item"></p>
     <h1 style="font-family: Princess Sofia; font-size: 55px; width: 60%;" class="w3-bar-item">Café Aotearoa</h1>
     <div class="dropdown-container">
-    <p class="w3-right w3-bar-item w3-button buttons" style="width: 20%; font-size: 25px; font-family: Sofia;" onclick="disp()">Contact:</p>
+    <p class="third w3-bar-item w3-button" style="width: 19%; font-size: 25px; font-family: Sofia;" onclick="disp()">Contact:</p>
     <div id="contactDropdown" class="dropdown-content">
         <input type="text" value="cafe.aotearoa@exampledomain.com" style="display: none;" id="copy">
         <button onclick="copy()">cafe.aotearoa@exampledomain.com</button>
     </div>
+    <p style="width: 1%;" class="w3-left w3-bar-item"></p>
 </div>
 </div>
 <p style="font-size: 130px;"></p>

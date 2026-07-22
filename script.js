@@ -87,7 +87,6 @@ var item = {
   const NAME_MONEY = document.getElementById("nameMoney");
   const CONT = document.getElementById("contactDropdown");
   const COPY = document.getElementById("copy");
-  const POPUP = document.getElementById("popup");
 //Define functions
 
 //Dropdown code
@@ -107,7 +106,12 @@ function copy(){
 }
 
 function closePopup(){
+  const POPUP = document.getElementById("popup");
 POPUP.close();
+}
+function closeNativePopup() {
+  const dialog = document.getElementById("favDialog");
+  dialog.close(); // Native JS method to close the HTML5 dialog
 }
 //Set up forms
 function getFlatWhite(){

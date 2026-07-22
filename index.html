@@ -214,6 +214,19 @@
 <button id="cancel" onclick="cancelAll()" style="display: none;" class="button">Cancel Order</button>
 <button id="close" onclick="closePopup()">Close</button>
 </dialog>
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>This is a native HTML popup modal!</p>
+    <!-- Method 1 to close: HTML form submission closes it automatically -->
+    <button>Close via Form</button> 
+    
+    <!-- Method 2 to close: Call a custom JS function -->
+    <button type="button" onclick="closeNativePopup()">Close via JS</button>
+  </form>
+</dialog>
+
+<!-- Button to open the dialog initially -->
+<button onclick="document.getElementById('favDialog').showModal()">Open Dialog</button>
 </div>
 <br>
 <script src="script.js"></script>

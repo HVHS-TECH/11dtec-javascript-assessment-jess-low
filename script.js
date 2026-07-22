@@ -87,6 +87,7 @@ var item = {
   const NAME_MONEY = document.getElementById("nameMoney");
   const CONT = document.getElementById("contactDropdown");
   const COPY = document.getElementById("copy");
+  const POPUP = document.getElementById("popover");
 //Define functions
 
 //Dropdown code
@@ -103,6 +104,10 @@ function copy(){
   COPY.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(COPY.value);
   alert(COPY.value + " copied");
+}
+
+function closePopup(){
+POPOVER.close();
 }
 //Set up forms
 function getFlatWhite(){

@@ -230,7 +230,7 @@ function getQuicheLorraine(){
 function getName(){
     if (GET_NAME.checkValidity() === false){
       OUTPUT.innerHTML = "";
-  } else if (GET_NAME.value === undefined){
+    } else if (GET_NAME.value === undefined){
     OUTPUT.innerHTML = "";
     } else {
     name = GET_NAME.value;
@@ -246,9 +246,8 @@ function getName(){
 function getMoney(){
     if (GET_MONEY.checkValidity() === false){
       OUTPUT.innerHTML = "";
-    } else if (GET_MONEY.value === undefined) {
-      OUTPUT.innerHTML = 
-    
+    } else if (GET_MONEY.value === undefined){
+      OUTPUT.innerHTML = "";
     } else {
     money = Number(GET_MONEY.value).toFixed(2);
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";

@@ -358,7 +358,7 @@ function cancelAll(){
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
-  } else if (GET_NAME.value === ""){
+  } else if (user.name === ""){
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
@@ -367,7 +367,7 @@ function cancelAll(){
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
-  } else if (money.value === null){
+  } else if (user.money === 0){
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';

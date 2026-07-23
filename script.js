@@ -226,6 +226,10 @@ function getQuicheLorraine(){
   }
 }
 
+function makeFormWork(event) {
+  event.preventDefault()
+}
+
 //Check if name is valid
 function getName(){
     if (GET_NAME.checkValidity() === false){
@@ -252,10 +256,6 @@ function getMoney(){
     RECEIPT_BUTTON.style.display = 'block';
     CLEAR_BUTTON.style.display = 'block';
     }
-}
-
-function makeFormWork(event) {
-  event.preventDefault()
 }
 
 //Display for order and receipt if information entered

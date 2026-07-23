@@ -329,9 +329,9 @@ function clearCancel(){
   item.quicheLorraine.amount = 0;
   item.quicheLorraine.price = 0;
   GET_NAME.value = "";
-  user.name.amount = "";
+  user.name = "";
   GET_MONEY.value = "";
-  user.money.amount = 0;
+  user.money = 0;
   item.finalNumber = 0;
   OUTPUT.style.display = 'none';
   NAME_MONEY.style.display = 'none';

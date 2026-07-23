@@ -226,14 +226,19 @@ function getQuicheLorraine(){
   }
 }
 
+let nameSubmit = false;
 function makeFormWork(event) {
-  event.preventDefault()
+  event.preventDefault();
+  nameSubmit = true;
 }
 
 //Check if name is valid
 function getName(){
     if (GET_NAME.checkValidity() === false){
       OUTPUT.innerHTML = "";
+    } else if (!nameSubmit) {
+      OUTPUT.innerHTML += "";
+      return
     } else {
     name = GET_NAME.value;
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";

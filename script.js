@@ -371,7 +371,7 @@ function cancelAll(){
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
-  } else if (Number(item.finalNumber) > Number(money)){
+  } else if (Number(item.finalNumber) > Number(user.money)){
     OUTPUT.innerHTML = "<h1 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, you don't have enough money to complete this purchase.</h1>";
     CLEAR_BUTTON.style.display = 'block';
     RECEIPT_BUTTON.style.display = 'none';

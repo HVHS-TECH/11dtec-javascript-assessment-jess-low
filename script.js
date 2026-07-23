@@ -279,6 +279,7 @@ function viewItems(){
     RECEIPT_BUTTON.style.display = 'block';
     CLEAR_BUTTON.style.display = 'block';
     NAME_MONEY.style.display = 'block';
+    CANCEL_BUTTON.style.display = 'none';
   } else {
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">I'm sorry, you don't have any items on your order. Try pressing 'Add To Order' when you enter an amount.</h3>";
   }

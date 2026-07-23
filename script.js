@@ -228,7 +228,6 @@ function getQuicheLorraine(){
 
 let nameSubmit = false;
 function makeFormWork(event) {
-  event.preventDefault();
   nameSubmit = true;
 }
 
@@ -238,7 +237,6 @@ function getName(){
       OUTPUT.innerHTML = "";
     } else if (!nameSubmit) {
       OUTPUT.innerHTML += "";
-      return
     } else {
     name = GET_NAME.value;
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";
@@ -364,7 +362,6 @@ function cancelAll(){
     RECEIPT_BUTTON.style.display = 'none';
     } else if (!nameSubmit) {
       OUTPUT.innerHTML += "";
-      return
   } else if (GET_MONEY.checkValidity() === false){
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';

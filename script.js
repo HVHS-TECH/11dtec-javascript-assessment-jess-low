@@ -228,22 +228,30 @@ function getQuicheLorraine(){
 
 //Check if name is valid
 function getName(){
+    if (GET_NAME.checkValidity() === false){
+      OUTPUT.innerHTML = "";
+    } else {
     name = GET_NAME.value;
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";
     fastDisplay()
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + item.finalNumber + "</h3>";
     RECEIPT_BUTTON.style.display = 'block';
     CLEAR_BUTTON.style.display = 'block';
+    }
 }
 
 //Check if amount is valid
 function getMoney(){
-  money = Number(GET_MONEY.value).toFixed(2);
+    if (GET_MONEY.checkValidity() === false){
+      OUTPUT.innerHTML = "";
+    } else {
+    money = Number(GET_MONEY.value).toFixed(2);
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";
     fastDisplay()
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + item.finalNumber + "</h3>";
     RECEIPT_BUTTON.style.display = 'block';
     CLEAR_BUTTON.style.display = 'block';
+    }
 }
 
 //Display for order and receipt if information entered

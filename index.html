@@ -195,7 +195,7 @@
 <!--Order completion buttons/forms cont.-->
 <div class="gallery-item" style="display: none;" id="nameMoney">
 <div class="gallery-items">
-<form>
+<form onsubmit="return false;">
     <label for="nameAdd" style="font-size: 20px; font-family: Amita;">Name:</label>
     <input type="text" oninput="this.value = this.value.replace(/[^\p{L}\s-]/gu, '')" id="name" name="nameAdd" minLength="2" placeholder="Name..." required>
     <input type="submit" onClick="getName()" class="buttons">

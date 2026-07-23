@@ -254,6 +254,10 @@ function getMoney(){
     }
 }
 
+function makeFormWork(event) {
+  event.preventDefault()
+}
+
 //Display for order and receipt if information entered
 function displayStuff(_name, _amount, _price){
     if (_amount > 0) {

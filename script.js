@@ -14,6 +14,11 @@ var item = {
   finalNumber: 0,
 }
 
+var user = {
+  name: "",
+  money: 0,
+}
+
 //Define constants
   const FLAT_WHITE = document.getElementById("flat");
   FLAT_WHITE.addEventListener('input', () => {
@@ -230,10 +235,8 @@ function getQuicheLorraine(){
 function getName(){
     if (GET_NAME.checkValidity() === false){
       OUTPUT.innerHTML = "";
-    } else if (GET_NAME.value === undefined){
-    OUTPUT.innerHTML = "";
     } else {
-    name = GET_NAME.value;
+    user.name = GET_NAME.value;
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";
     fastDisplay()
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + item.finalNumber + "</h3>";
@@ -246,10 +249,8 @@ function getName(){
 function getMoney(){
     if (GET_MONEY.checkValidity() === false){
       OUTPUT.innerHTML = "";
-    } else if (GET_MONEY.value === undefined){
-      OUTPUT.innerHTML = "";
     } else {
-    money = Number(GET_MONEY.value).toFixed(2);
+    user.money = Number(GET_MONEY.value).toFixed(2);
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your order:</h3>";
     fastDisplay()
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + item.finalNumber + "</h3>";
@@ -328,9 +329,9 @@ function clearCancel(){
   item.quicheLorraine.amount = 0;
   item.quicheLorraine.price = 0;
   GET_NAME.value = "";
-  name.amount = "";
+  user.name.amount = "";
   GET_MONEY.value = "";
-  money.amount = 0;
+  user.money.amount = 0;
   item.finalNumber = 0;
   OUTPUT.style.display = 'none';
   NAME_MONEY.style.display = 'none';
@@ -357,16 +358,7 @@ function cancelAll(){
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter a name into the 'Name' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
-  } else if (GET_NAME.value === ""){
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter a name into the 'Name' section to complete your order.</h3>";
-    CLEAR_BUTTON.style.display = 'none';
-    RECEIPT_BUTTON.style.display = 'none';
-    return;
   } else if (GET_MONEY.checkValidity() === false){
-    OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter an amount into the 'Money' section to complete your order.</h3>";
-    CLEAR_BUTTON.style.display = 'none';
-    RECEIPT_BUTTON.style.display = 'none';
-  } else if (money.value === null){
     OUTPUT.innerHTML = "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Please enter an amount into the 'Money' section to complete your order.</h3>";
     CLEAR_BUTTON.style.display = 'none';
     RECEIPT_BUTTON.style.display = 'none';
@@ -375,12 +367,12 @@ function cancelAll(){
     CLEAR_BUTTON.style.display = 'block';
     RECEIPT_BUTTON.style.display = 'none';
   } else {
-    OUTPUT.innerHTML = "<h2 style=\"font-family: 'Zen Old Mincho', serif;\"> Name: " + name + "</h2>";
+    OUTPUT.innerHTML = "<h2 style=\"font-family: 'Zen Old Mincho', serif;\"> Name: " + user.name + "</h2>";
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">These are the items on your receipt:</h3>";
     fastDisplay()
     OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Total: $" + Number(item.finalNumber).toFixed(2) + "</h3>";
-    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Money given: $" + Number(money).toFixed(2) + "</h3>";
-    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Change: $" + (Number(money) - Number(item.finalNumber)).toFixed(2) + "</h3>";
+    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Money given: $" + Number(user.money).toFixed(2) + "</h3>";
+    OUTPUT.innerHTML += "<h3 style=\"font-family: 'Zen Old Mincho', serif;\">Change: $" + (Number(user.money) - Number(item.finalNumber)).toFixed(2) + "</h3>";
     ORDER_BUTTON.style.display = 'block';
     RECEIPT_BUTTON.style.display = 'none';
     CLEAR_BUTTON.style.display = 'none';

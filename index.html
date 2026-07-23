@@ -186,7 +186,7 @@
 </div>
 <!--Order completion buttons/forms-->
 <br>
-<button id="order" class="button" popovertarget="popup" onclick="viewItems()">View items on order:</button>
+<button id="order" class="button" popovertarget="popup" onclick="viewItems()">View items on order</button>
 <!--Popup-->
 <dialog id="popup" popover>
 <button id="close" popovertarget="popup" style="font-size: 25px;" class="w3-right" popovertargetaction="close">X</button>
@@ -208,11 +208,11 @@
 </form>
 </div>
 </div>
-<button id="receipt" onclick="getReceipt()" style="display: none;" class="button">Receipt:</button>
+<button id="receipt" onclick="getReceipt()" style="display: none;" class="button">Receipt</button>
 <br>
 <!--Cancel-->
-<button id="clear" onclick="clearAll()" style="display: none;" class="button" popovertargetaction="hide">Clear All:</button>
-<button id="cancel" onclick="cancelAll()" style="display: none;" class="button" popovertargetaction="hide">Cancel Order</button>
+<button id="clear" onclick="clearAll()" style="display: none;" class="button" popovertarget="popup" popovertargetaction="close">Clear All</button>
+<button id="cancel" onclick="cancelAll()" style="display: none;" class="button" popovertarget="popup" popovertargetaction="close">Cancel Order</button>
 </form>
 </dialog>
 
